@@ -32,12 +32,104 @@
 
     <section>
       <h3>tpye="text" / type="password"</h3>
-      사용자명 : <input type="text" name="userName" id="user_name" maxlength="10"
-      placeholder="이름을 입력하세요"><br>
+      사용자명 : <input type="text" name="userName" id="user_name" maxlength="10" placeholder="이름을 입력하세요" autofocus><br>
       <!-- input이 안에 들어갈 글자 보이고 안보이고 차이 name 띄어쓰기 없는 영어만 가능 id는 스타일을 주기위해서 사용함 mexlength는 글자 입력할 수 있는 최대수 placehoder뭘 입력할지 알려주는거 -->
-      비밀번호 : <input type="password">
+      비밀번호 : <input type="password" name="userPassWold" id="user_passworld" minlength="4" placeholder="비밀번호를 입력하세요"
+        required><br>
+
+      <input type="submit" value="확인">
+      <input type="reset" value="취소">
+      <input type="button" value="버튼">
+
     </section>
-   
+    <hr>
+
+    <section>
+      <h3>여러 줄의 텍스트 박스</h3>
+      <textarea name="textBox" id="textBox" cols="30" row="10"
+        placeholder="텍스트 박스">인라인. 이 안에 글 작성시 박스 안에 출력. placeholder와 다름</textarea>
+    </section>
+    <hr>
+
+    <section>
+      <h3>라디오 버튼</h3>
+      <p>하나의 값만 선택 가능<strong>name 속성은 반드시 같아야 함</strong></p>
+      <input type="radio" name="choice" value="윤두준">윤두준
+      <input type="radio" name="choice" value="양요섭">양요섭
+      <input type="radio" name="choice" value="이기광">이기광
+      <input type="radio" name="choice" value="손동운" checked="checked">손동운
+      <!-- checked 하나만 가능 -->
+    </section>
+
+    <section>
+      <h3>체크박스 버튼</h3>
+      <p>여러 개의 값 선택 가능.<strong>name 속성은 반드시 같아야함</strong></p>
+      <input type="checkbox" name="decide" value="비스트">비스트
+      <input type="checkbox" name="decide" value="하이라이트">하이라이트
+      <input type="checkbox" name="decide" value="에스파">에스파
+      <input type="checkbox" name="decide" value="라이즈">라이즈
+
+    </section>
+
+    <hr>
+    <section>
+      <h3>드롭다운 형태의 메뉴</h3>
+      <select name="menu" id="menu">
+        <!-- 반드시 하나의 option은 있어야함 -->
+        <option value="">이곳에서 선택해 주세요</option>
+        <!-- label 옵션 그룹 이름. 필수 값 -->
+        <optgroup label="그룹1">
+          <option value="아이스크림">아이스크림</option>
+          <option value="푸딩" selected>푸딩</option>
+          <option value="약과">약과</option>
+          <!-- selected 하나만 가능 -->
+        </optgroup>
+
+        <optgroup label="그룹2">
+          <option value="아아">아이스아메리카노</option>
+          <option value="아라">아이스카페라떼</option>
+          <option value="아바라">아이스바닐라라떼</option>
+
+        </optgroup>
+
+      </select>
+
+    </section>
+
+    <section>
+      <h3>파일 첨부 버튼</h3>
+      <input type="file" name="userFile">
+      <!-- accept="트정 확장자만 첨부" -->
+      <input type="file" name="file" accept=".jpg, .png, .pdf, .xlsx"><br>
+      <button type="submit">전송</button>
+      <button type="reset">취소</button>
+    </section>
+    <hr>
+    <section>
+      <h3>날짜</h3>
+      <input type="date" name="yymmdd">
+      <h3>이메일</h3>
+      <input type="email" name="userEmail">
+      <hr>
+      <h3>url</h3>
+      <input type="url" name="urerUrl">
+      <hr>
+      <h3>검색</h3>
+      <input type="search" name="urerSearch">
+      <hr>
+      <h3>범위</h3>
+      <input type="range" name="urerRange">
+      <hr>
+      <h3>숫자</h3>
+      <input type="number" name="urerNumber">
+      <hr>
+      <h3>전화</h3>
+      <input type="tel" name="urerTel" disabled>
+      <!-- disabled 쓸수없게 막아둠 -->
+
+
+    </section>
+
 
   </form>
 

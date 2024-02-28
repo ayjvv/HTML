@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>formEx1</title>
+</head>
+
+<body>
+  <h1>form 연습 1</h1>
+
+  <form>
+    <fieldset>
+      <legend>상세정보</legend>
+      <p><label for="user_name">이름: </label><input type="text" name="userName" id="user_name" placeholder="이름을 작성하세요."
+          required autofocus></p>
+      <p><label for="user_email">이메일: </label><input type="text" name="userEmail" id="user_email"
+          placeholder="이메일을 작성하세요."></p>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>리뷰</legend>
+      <p><label for="userSite">사이트를 알게 된 경위는?</label></p>
+
+      <select name="userSite" id="userSite">
+
+        <option value="직접 검색">직접 검색</option>
+        <option value="신문광고" selected>신문광고</option>
+        <option value="인터넷 검색">인터넷 검색</option>
+        <option value="방송">방송</option>
+
+
+
+      </select>
+
+      <hr>
+
+      <p>다시 방문 하시겠습니까?</p>
+
+      <input type="radio" name="choice" id="yes" value="네"><label for="yes">네</label>
+      <input type="radio" name="choice" id="no" value="아니오" checked> <label for="no">아니오</label>
+      <input type="radio" name="choice" id="dontknow" value="모름"><label for="dontknow">모름</label>
+
+      <hr>
+
+      <p>의견: <textarea placeholder="여러 줄의 텍스트 박스"></textarea></p>
+      <hr>
+      <p><input type="checkbox" name="decide" value="이메일" checked>이메일 업데이트에 가입</p>
+      <hr>
+      <button type="submit">리뷰 전송</button>
+      <button type="reset">전송 취소</button>
+
+
+
+    </fieldset>
+
+
+  </form>
+
+
+
+
+</body>
+
+</html>

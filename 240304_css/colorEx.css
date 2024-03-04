@@ -13,14 +13,14 @@ h2 {
   color: deeppink;
 }
 
-.box2 {
+#box2 {
   color: blueviolet;
 }
 
-.box3 {
+#box3 {
   color: cornflowerblue;
 }
 
-.box4 {
+#box4 {
   color: cadetblue;
-}
+} 

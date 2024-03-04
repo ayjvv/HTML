@@ -1,0 +1,26 @@
+@charset "uft-8";
+
+
+body {
+  background-color: orange;
+}
+
+h2 {
+  background-color: azure;
+}
+
+#box1 {
+  color: deeppink;
+}
+
+.box2 {
+  color: blueviolet;
+}
+
+.box3 {
+  color: cornflowerblue;
+}
+
+.box4 {
+  color: cadetblue;
+}

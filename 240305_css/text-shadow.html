@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>text-shadow</title>
+  <style>
+    /* 서채 변경, 중앙 정렬, 대소문자, 서체크기 */
+    body{
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .title1{
+     font-family: '코트라 희망체', '맑은 고딕', 돋움, sans-serif;
+     text-transform: capitalize;
+     font-size: 40px;
+     color: #9B4444;
+     text-shadow: 10px 10px 10px #999; /* x축 y축 번짐 색상 */
+    }
+    .title2{
+      color: #C68484;
+      font-size: 30px;
+      font-family: '배달의민족 주아', '맑은 고딕', 돋움, sans-serif;
+      text-shadow: -10px -10px 10px #E1AFD1;
+    }
+
+    .title3{
+     color: #A3C9AA;
+     font-size: 20px;
+     font-family: '학교안심 산뜻돋움 L', '맑은 고딕', 돋움, sans-serif;
+     text-shadow: 0px 10px 0 #C68484; 
+     /* x축 y축 번짐 색상 */
+    }
+
+    .title4{
+      color: #F6995C;
+      font-size: 15px;
+      text-shadow: 0px -10px #C68484;
+      /* x축 y축 색상 */
+    }
+    .title5{
+      color: skyblue;
+      text-shadow: 0px 10px #AD88C6;
+      /* x축 y축. 번짐 생략. 생상 생략시 글자 색을 따라감 */
+    }
+
+    .title6{
+       text-shadow: 
+       0 0 10px #999,
+       10px 10px 10px red,
+       -10px -10px 10px hotpink,
+       0 0 10px orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="title1">text-shadow 서체 그림자</h2>
+  <h2 class="title2">text-shadow 서체 그림자</h2>
+  <h2 class="title3">text-shadow 서체 그림자</h2>
+  <h2 class="title4">text-shadow 서체 그림자</h2>
+  <h2 class="title5">text-shadow 서체 그림자</h2>
+  <h2 class="title6">text-shadow 서체 그림자</h2>
+ 
+  
+</body>
+</html>

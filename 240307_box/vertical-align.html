@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>vertical-align</title>
+  <style>
+    p {
+      background-color: #FFFDCB;
+      color: #FF8E8F;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .six-months {
+      /* vertical-align: top; /* 현재 요소와 자손들 모두 top기준 */
+    }
+
+    .one-year {
+      vertical-align: baseline;
+      /* 기본값 */
+    }
+
+    .two-years1 {
+      vertical-align: bottom;
+      /* 현재 요소와 자손들 모두 bottom기준 */
+    }
+
+    .two-years2 {
+      vertical-align: middle;
+      /* 부모기준(baseline 기준으로 글자 높이의 반) */
+    }
+
+    .two-years3 {
+      /* 이미지의 기본값으로 설정 */
+      vertical-align: top;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <h1>인라인 세로 정렬 vertical-align</h1>
+  <!-- 이미지에만 기본값으로 탑, 바텀, 미들 -->
+  <ul>
+    <li>서체 및 인라인 요소 세로 정렬 기준</li>
+    <li>글씨와 이미지 및 input의 정렬 상태가 맞지 않는다면, 이미지 요소 및 input에 vertical-align 적용</li>
+  </ul>
+
+  <p>
+    <img src="./images/six-months.gif" alt="six-months" class="six-months">six-month: topline
+  </p>
+
+  <p>
+    <img src="./images/one-year.gif" alt="one-year" class="one-year">one-year: baseline
+  </p>
+
+
+  <p>
+    <img src="./images/two-years.gif" alt="two-years" class="two-years1">two-years: bottom
+
+  <p>
+    <img src="./images/two-years.gif" alt="two-years" class="two-years2">two-years: middle
+  </p>
+
+  <p>
+    <img src="./images/two-years.gif" alt="two-years" class="two-years3">
+  </p>
+
+</body>
+
+</html>

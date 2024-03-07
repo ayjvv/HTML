@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>바깥여백 margin</title>
+  <style>
+    body {
+      background-color: #F1EF99;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: '나눔고딕', '맑은고딕', 돋움, sans-serif;
+      font-size: 27px;
+      color: #9BB0C1;
+      background-color: #EBC49F;
+      padding: 20px 10px;
+      /* top+bottom right+left */
+      margin-top: 0px;
+
+    }
+
+    .box {
+      width: 300px;
+      background-color: #9BB0C1;
+      font-weight: bold;
+    }
+
+    .box1 {
+      margin: 20px;
+    }
+
+    .box2 {
+      margin: 10px 20px 30px 40px;
+      /* top right bottom left */
+    }
+
+    .box3 {
+      margin-top: 10px;
+      margin-bottom: 60px;
+      margin-left: 10px;
+      margin-right: 20px;
+    }
+
+    .box4 {
+      margin: 50px 20px;
+      /* top+bottom:50px left+right:20px */
+    }
+
+    .box5 {
+      margin: 10px 20px 30px;
+      /* top:10px right+left:20px bottom:30px */
+    }
+
+    .box6 {
+      margin: 50px;
+    }
+
+    .box7 {
+      margin: 0px;
+      margin-top: 350px;
+    }
+
+    /* 
+    마진 상쇄 현상
+     일반적인 흐름에서,
+      1. 형제 관계 요소의 magin-bottom과 margin-top이 만나면 둘 중 큰 값이 적용
+      2. 부모 자식 관계 요소에서 magin-top의 값이 같이 들어간 경우 둘 중 큰 값이 적용 */
+  </style>
+
+</head>
+
+<body>
+
+  <!-- h1{기준 요소 바깥 여백 margin}+div.box.box$ div 생략가능
+  h1{기준 요소 바깥 여백 margin}+.box.box${$.마진(margin)이란 기준요소의 바깥 여백을 말한다.}*7 -->
+
+
+  <h1>기준 요소 바깥 여백 margin</h1>
+
+  <div class="box box1">1.마진(margin)이란 기준요소의 바깥 여백을 말한다.</div>
+  <div class="box box2">2.마진(margin)이란 기준요소의 바깥 여백을 말한다.</div>
+  <div class="box box3">3.마진(margin)이란 기준요소의 바깥 여백을 말한다.</div>
+  <div class="box box4">4.마진(margin)이란 기준요소의 바깥 여백을 말한다.</div>
+  <div class="box box5">5.마진(margin)이란 기준요소의 바깥 여백을 말한다.</div>
+  <div class="box box6">6. 마진 상쇄 현상: 인접형제 요소 및 부모 요소의 magin-bottom과 margin-top의 마진값이 만났을 때 둘 중 큰 값이 적용. 단, float, flex,
+    overflow,position 등의 값이 적용된 경우는 발생하지 않음.</div>
+  <p class="box box7">7. p요소</p>
+
+
+
+</body>
+
+</html>

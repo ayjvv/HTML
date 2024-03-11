@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>요소의 실제 크기2</title>
+</head>
+<style>
+  body{
+    /* 어절 기준 줄바꿈  상속 */
+    word-break: normal;
+    /* 띄어쓰기가 있을 시 줄바꿈 */
+    word-break: break-all;
+    /* 어절에 맞춰 줄바꿈 영어 한정 */
+    word-break: keep-all;
+    /* 어절을 유지하며 줄바꿈. 한글 적용 */
+  }
+   .box{
+    background-color: #ddd;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .box1{
+    background-color: cornflowerblue;
+    color: #fff;
+    width: 400px; height: 300px;
+    outline: 10px solid chocolate;
+    margin: 50px auto;
+  }
+  .box2{
+    border: solid 3px #76ABAE;
+    width: 300px; height: 300px;
+    margin: 0 auto;
+    padding-top: 100px; padding-left: 20px;
+  }
+
+  .box3{
+    background-color: #76ABAE;
+    outline: 4px solid #000;
+    width: 300px; height: 400px;
+    margin: 20px auto 0;
+    padding: 20px 10px 0 30px; 
+  }
+  .box4{
+    background-color: blueviolet;
+    border: dotted 2px #76ABAE;
+    border-top: none;
+    width: 400px; height: 200px;
+    outline: #E8751A 30px solid;
+    margin: 20px auto 0;
+    padding: 10px 20px 0 0;
+  }
+  .box5{
+    /* 가로600 세로250
+    안쪽 여백 위 아래 50
+    안쪽 여백 좌 우 20
+    테두리 위10, 오른쪽 5 아래 10 왼쪽 5 */
+    width: 600; height: 250;
+    padding: 50px 20px;
+    border-width: 10px 5px;
+    /* border: 10px soild #000
+    border-right-width: 5px
+    border-left-width: 5px */
+    border-style: solid;
+    border-color: #E8751A;
+    background-color: antiquewhite;
+  }
+  .box6{
+    /* 가로 150 세로200
+    요소 중앙 정렬
+    바깥 여백 위 50
+    안쪽 여백 위 10 안쪽 여백 아래50
+    안쪽 여백 오른쪽 50 안쪽 여백 왼쪽 50
+    테두리 위10 아래 5 왼쪽4 오른쪽 4 */
+    width: 150px; height: 200px;
+    margin: 50px auto 0;
+    background-color: aqua;
+    padding: 10px 50px 50px;
+    border: 4px solid #000;
+    border-top-width: 10px;
+    border-bottom-width: 5px;
+  }
+</style>
+
+<body>
+  <h1>요소의 실제 크기2</h1>
+  <div class="box box1">
+    <p>너비:w400+m0+m0+p0+p0+b0+b0=400px</p>
+    <p>높이:h300+m50+m50+p0+p0+b0+b0=400px</p>
+  </div>
+  <div class="box box2">
+    <p>너비:w300+m0+m0+p0+p20+b3+b3=326px</p>
+    <p>높이:h300+m0+m0+p100+p0+b3+b3=406px</p>
+  </div>
+  <div class="box box3">
+    <p>너비:w300+m0+m0+p10+p30+b0+b0=340px</p>
+    <p>높이:h400+m20+m20+p20+p0+b0+b0=460px</p>
+  </div>
+  <div class="box box4">
+    <p>너비:w400+m0+m0+p20+p0+b2+b2=424px</p>
+    <p>높이:h200+m20+m0+p10+p0+b0+b2=232px</p>
+  </div>
+  <div class="box box5">
+    <p>너비:w600+m0+m0+p20+p20+b5+b5=650px </p>
+    <p>높이:h250+m0+m0+p50+p50+b10+b10=370px </p>
+  </div>
+  <div class="box box6">
+    <p>너비: w150+m0+m0+p50+p50+b4+b4=258px</p>
+    <p>높이: h200+m50+m0+p10+p50+b10+b5=325px</p>
+    <p>한 회계연도를 넘어 계속하여 지출할 필요가 있을 때에는 정부는 연한을 정하여 계속비로서 국회의 의결을 얻어야 한다. 모든 국민은 통신의 비밀을 침해받지 아니한다.</p>
+  </div>
+</body>
+</html>

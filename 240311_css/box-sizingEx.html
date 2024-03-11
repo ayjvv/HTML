@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>box-sizingEx</title>
+  <style>
+    .box{
+      width: 400px; height: 200px;
+      margin: 20px auto 30px;
+      padding: 20px 30px;
+      border-width: 10px 10px 5px;
+      border-style: solid;
+      border-color: black;
+    }
+  
+    .box2{
+      box-sizing: border-box;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>box-sizingEx</h1>
+  <div class="box box1">
+    <h3>box-sizing: content-box</h3>
+    <p>w400+m0+m0+p30+p30+b10+b10=480px
+      h200+m20+m30+p20+p20+b10+b5=305px
+    </p>
+  </div>
+  <div class="box box2">
+    <h3>box-sizing: boder-box</h3>
+    <p>w400(p60+b20)+m0=400px
+      h200(p40+b15)+m20+m30=250px
+    </p>
+    
+</body>
+</html>

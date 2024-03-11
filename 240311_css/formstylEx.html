@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>formstylEx</title>
+
+  <style>
+
+    form{
+      background-color: #DFF5FF;
+      width: 600px; padding: 80px
+    
+    }
+
+    fieldset{
+      background-color: #fff;
+      border-color: #378CE7;
+      border-radius: 20px;
+      margin: auto;
+    }
+
+    legend{
+
+      background-color: #FDA403;
+      border-radius: 5px;
+      color:#891652;
+    }
+
+    button{
+      background-color: #378CE7;
+      color: #fff;
+    }
+    input{
+      border: none;
+      border-bottom:2px solid #378CE7;
+    }
+    p{
+      color: #891652;
+      text-align: center;
+    }
+    .box1 {
+      text-align: right;
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+  <fieldset>
+    <legend>회원가입</legend>
+    <p>이름:<input type="text" name="userName" id="user_name"></p>
+    <p>이메일:<input type="email" name="userEmail" id="user_email"></p>
+
+    <p class="box1"><button type="submit">가입</button>
+    <button type="reset">취소</button></p>
+  </fieldset>
+  </form>
+</body>
+</html>

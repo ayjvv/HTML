@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>box-sizing</title>
+</head>
+<style>
+  .box{
+    font-weight: bold;
+    font-size: 20px;
+
+    width: 300px; height: 200px;
+    margin: 30px;
+    padding: 30px;
+    border: 10px solid #378CE7;
+  }
+  .box1{
+    /* 요소의 실제 크기 계산 방식 설정 */
+    box-sizing: content-box; /* 기본값 width+margin+padding+boder */
+  }
+  .box2{
+    box-sizing: border-box; /* width(padding+boder)+margin */
+  }
+
+</style>
+
+<body>
+  <h1>box-sizing</h1>
+  <div class="box box1">
+    <h3>box-sizing: content-box</h3>
+    <p>w300+m30+m30+p30+p30+b20+b20=440px</p>
+  </div>
+  <div class="box box2">
+    <h3>box-sizing: boder-box</h3>
+    <p>w300(p30+p30+b10+b10)+m30+m30=360px</p>
+    <!-- 퍼센트 값 구할 때 -->
+  </div>
+
+</body>
+</html>

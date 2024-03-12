@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+form{
+  background-color: #FFFDCB;
+  
+    font-family: "Noto Sans KR","맑은 고딕",돋움, sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    /* font-weight: thin; */
+    max-width: 500px;
+    /*최대 500이상으로는 커지지않음*/
+    min-width: 300px;
+    /*최대 300이하로는 작아지지않음*/
+    margin: 10px auto;
+    overflow: hidden;
+    color: #222;
+    /* 
+    마진 상쇄 현상: 일반적인 흐름에서,
+    자식의 magin-top과 부모의 margin-top이만나면 둘중 큰 값이 부모에게 적용 해결 방법-> 부모 요소에  overflow: hidden */
+  }
+
+  form fieldset{
+    background-color: #fff;
+    border: solid 3px #E8751A;
+    border-radius: 20px;
+    width: 70%;
+    margin: 50px auto;
+    /* 마진 상쇄 form에도 마진 10px가있음 */
+    text-align: right;
+    padding: 4% 8%;
+  }
+
+  form fieldset legend{
+    text-align: left;
+    background-color: #FF8E8F;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 10px;
+    width: 40%;
+    box-sizing: border-box;
+  }
+
+  form fieldset input{
+    width: 70%;
+    padding: 4px 8px;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #FF8E8F;
+    margin-bottom: 10px;
+    outline: none; /* 크롬, 엣지, 웨일 등 모던 브라우저에서 생기는 현상으로 포커스 상태일 때 테두리 없앰 */
+    font-family: inherit; /* 부모 값 상속 */
+    color: inherit;
+  }
+
+  /* 
+  텍스트 필드: 마우스 이벤트
+  ㄴ 기본일 때는 border-bottom만 있고
+  ㄴ 마우스를 올렸을 때는 border 전부가 있고
+  ㄴ클릭 했을 때는 배경색
+  버튼: 마우스 이벤트 */
+ 
+
+
+   /* 속성(특성) 선택자: 요소[속성], 요소[속성=값],[속성] */
+  form fieldset input[type]:hover{
+    border: #FF8E8F 2px solid;
+  }
+
+  form fieldset input[name=user_email]:focus {
+    /* :focus가 잡혔을 때 */
+    background-color: #FFB38E;
+    border: 2px solid transparent;
+  }
+
+  form fieldset [required]:focus{
+    background-color: #E8751A;
+    border:  2px solid transparent;
+  }
+
+form button{
+  background-color: #FFFDCB;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 4px 20px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: antiquewhite;
+}
+
+

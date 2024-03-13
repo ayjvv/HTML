@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>display 연습1</title>
+  <style>
+    .gnb {
+      text-align: center;
+      /* background-color: #ddd; */
+    }
+
+    .gnb li {
+      /* background-color: #ddd; */
+      display: inline-block;
+    }
+
+    .gnb li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: orange;
+      color: inherit;
+      padding: 5px 10px;
+      margin: 0 5px;
+      display: block;
+      /* ↑거의 대부분 제어를 위해 필수로 씀 */
+      border: 3px solid #000;
+    }
+
+    .gnb li:hover a {
+      background-color: orangered;
+      color: #fff;
+      /* li에 마우스를 올리면 하위에 있는 a가 컬러를 바꿔라. */
+    }
+
+    /* .gnb li{
+    background-color: orange;
+    border: 2px solid #000;
+    display: inline;
+    width: 80px;
+    padding: 10px;
+    margin: 3px;
+   }
+   
+   .gnb{
+    text-align: center;
+   }
+   a:hover{
+    color: orange;
+   }
+   .gnb li:hover{
+    background-color: thistle;
+   }
+   
+   li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    width: 80px;
+    padding: 10px;
+   }
+   */
+  </style>
+</head>
+
+<body>
+  <h1>display 연습1</h1>
+  <ul>
+    <li>마우스를 올리면 글자색과 배경색 변경</li>
+    <li>중앙 정렬</li>
+  </ul>
+  <menu class="gnb">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </menu>
+</body>
+
+</html>

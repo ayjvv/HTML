@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>flex2_flex-wrap</title>
+  <style>
+    body {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .wrapper {
+      border: 6px solid #000;
+      width: 80vw;
+      margin: 2vw auto;
+    }
+
+    .wrapper .item1 {
+      background-color: #B0C5A4;
+    }
+
+    .wrapper .item2 {
+      background-color: #D37676;
+    }
+
+    .wrapper .item3 {
+      background-color: #EBC49F;
+    }
+    #container{
+      display: flex;
+      flex-direction: row;
+
+      flex-wrap: nowrap; /* 기본값. 플렉스 아이템 한 줄 배치 */
+      flex-wrap: wrap; /* 줄바꿈 */
+      flex-wrap: wrap-reverse; /* 역방향 줄바꿈 */
+    }
+    #container .item{
+      width: 50%;
+      height: 20vh;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>flex2 : flex-wrap </h1>
+  <div class="wrapper" id="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>flexEx4</title>
+
+  <style>
+    /* body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end; 
+     }
+
+    footer{
+      background-color: #B0C5A4;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 70vw;
+    }
+    h2{
+      margin: 0;
+    } */
+
+    body {
+      margin: 0;
+    }
+
+    /* .wrapper{
+      display: flex;
+      align-items: flex-end;
+      height: 100vh;
+    }
+    .wrapper footer{
+      background-color: #B0C5A4;
+      - width: 1400px; 1400/1900*100
+      width: 73.684vw;
+      margin: 0 auto;
+      padding: 1vw 2vw;
+      box-sizing: border-box;
+      - width 기준(border+padding)
+    }
+
+    .wrapper footer h2{
+      margin: 0;
+    }
+     */
+
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .wrapper footer {
+      background-color: #B0C5A4;
+      width: 73.684vw;
+      /* margin: 0 auto; */
+      padding: 1vw 2vw;
+      box-sizing: border-box;
+
+      /* align-self: flex-end; 플렉스 아이템에 직접 적용 */
+
+      /* 플렉스 아이템에 직접 적용
+      magin을 통해 개별적으로 위치지정 가능. 더 섬세하게 조정가능 */
+      /* margin: auto; center center */
+
+      /* margin-left: auto; 여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽 배치 */
+      /* margin-right: auto; 여백이 오른쪽으로 들어가기 때문에 아이템은 왼쪽 배치 */
+      /* margin-bottom: auto; 여백이 아래쪽으로 들어가기 때문에 아이템은 위로 배치 */
+      /* margin-top: auto; 여백이 위쪽으로 들어가기 때문에 아이템은 아래쪽에 배치 */
+
+      margin: 5rem auto 2rem;
+      margin: auto auto 0;
+    }
+  </style>
+</head>
+
+
+<body>
+  <!-- <footer>
+    <h2>footer</h2>
+    <p>국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다.</p>
+  </footer> -->
+  <div class="wrapper"> <!-- flex-container -->
+    <footer> <!-- flex-item -->
+      <h2>footer</h2>
+      <p>국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여야 한다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지
+        아니하다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

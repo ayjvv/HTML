@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>flex7_align-content</title>
+  <style>
+    body {
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .wrapper {
+      border: 6px solid #000;
+      width: 80vw;
+      margin: 2vw auto;
+
+      display: flex;
+      height: 80vh;
+      /* 주축은 가로, 줄바꿈 */
+      flex-flow: row wrap;
+
+      /* align-items: flex-end; */
+
+    }
+
+    .wrapper .item {
+      width: 50%;
+      color: #fff;
+      /* align-items: strech;와 높이 값이 같이 적용된 경우 높이 값 우선 */
+    }
+
+    .wrapper .item1 {
+      background-color: #FB88B4;
+      height: 150px;
+    }
+
+    .wrapper .item2 {
+      background-color: #F9F07A;
+      height: 10vw;
+    }
+
+    .wrapper .item3 {
+      background-color: #B7C9F2;
+      height: 10em;
+    }
+
+    .wrapper .item4 {
+      background-color: #9195F6;
+      height: 10vh;
+    }
+
+    .wrapper .item5 {
+      background-color: #FBA834;
+      height: 10%;
+      /* 글자가 넘어간거임 */
+    }
+
+    #container1 {
+      /* 교차축 기준으로 여러 아이템을 하나의 덩어리로 보고 정렬 */
+      align-content: stretch; /* 기본 값. 높이 값이 지정되어 있으면 적용되지 않음 */
+      align-content: flex-start; /* 여러 아이템을 하나의 그룹으로 보고 교차축 시작점에서 정렬 */
+      align-content: end;
+      align-content: center;
+      align-content: space-around;
+      align-content: space-between;
+      align-content: space-evenlym;
+    }
+
+    #container2 {
+      align-items: flex-start;
+      /* 아이템 하나 하나씩 행에 탑에 정렬 */
+      align-items: end;
+      align-items: center;
+      /* align-items: space-around; 없음 */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>flex7 : align-conten </h1>
+  <div class="wrapper" id="container1">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+    <div class="item item5">item5</div>
+  </div>
+
+  <div class="wrapper" id="container2">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+    <div class="item item5">item5</div>
+  </div>
+
+</html>

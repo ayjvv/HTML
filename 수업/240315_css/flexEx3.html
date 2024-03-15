@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx3</title>
+</head>
+<style>
+  /* body{
+    margin: 0;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item1{
+    background-color: #B0C5A4;
+    height: 10vh;
+  }
+  .item2{
+    background-color: #D37676;
+    height: 4dvh;
+  }
+  .item3{
+    background-color: #EBC49F;
+    color: #fff;
+    width: 30vw;
+  }
+  .item4{
+    background-color: #F1EF99;
+    color: #fff;
+    width: 70vw;
+  }
+  .wrapper1{
+    display: flex;
+    flex-direction: row;
+    height: 86vh;
+  } */
+
+  body{
+    margin: 0;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .container{ /* flex-container */
+    background-color: #B0C5A4;
+    display: flex;
+    flex-direction: column;
+  }
+  .container header{ /* flex item */
+    background-color: #D37676;
+    height: 14vh;
+  }
+  .container nav{ /* flex item */
+    background-color: #EBC49F;
+    height: 8vh;
+  }
+  .container .contents{ /*  flex-itme / flex-container */
+    background-color: #FFD23F;
+    display: flex;
+    height: 78vh; /* 100vh - header vh - nav vh */
+    height: calc(100vh - 14vh - 8vh);
+    /* height: 100vh; */
+  }
+  .container .contents aside{
+    background-color: #ACE2E1;
+    width: 30%;
+    /* width: 30vw; */
+  }
+  .container .contents section{
+    background-color: #E5E483;
+    width: 70%;
+    /* width: 70vw; */
+  }
+  .container .contents section h2{
+    margin: 0;
+    font-size: 2rem;
+  }
+
+</style>
+<body>
+  <!-- <div class="wrapper">
+    <header class="item1">header</header>
+    <nav class="item2">nav</nav>
+  </div>
+    <div class="wrapper1">
+    <aside class="item3">aside</aside>
+    <section class="item4">section</section>
+  </div> -->
+
+  <div class="container">
+    <header>header</header>  <!-- flex-container -->
+    <nav>nav</nav> <!-- flex item -->
+
+    <div class="contents"> <!-- flex-itme / flex-container -->
+    <aside>aside</aside> <!-- flex item -->
+    <section><h2>section</h2></section> <!-- flex item -->
+    </div>
+  </div>
+</body>
+</html>

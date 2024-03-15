@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>flex8_align-self</title>
 </head>
 <style>
   body {
-  margin: 0;
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-}
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
 
-.wrapper {
-  border: 6px solid #000;
-  width: 80vw; height: 70vh;
-  margin: 2vw auto;
+  .wrapper {
+    border: 6px solid #000;
+    width: 80vw;
+    height: 70vh;
+    margin: 2vw auto;
 
-  display: flex;
-}
+    display: flex;
+  }
 
-.wrapper .item1 {
-  background-color: #FF407D;
-}
+  .wrapper .item1 {
+    background-color: #FF407D;
+  }
 
-.wrapper .item2 {
-  background-color: #FFCAD4;
-}
+  .wrapper .item2 {
+    background-color: #FFCAD4;
+  }
 
-.wrapper .item3 {
-  background-color: #40679E;
-}
-.wrapper .item4 {
-  background-color: #1B3C73;
-}
+  .wrapper .item3 {
+    background-color: #40679E;
+  }
 
-#container{
-  height: 50vh;
-/* 주축 row기준으로 양 끝 여백 없이 동일한 간격으로 정렬 */
-justify-content: space-between;
-/* 교차축 기준 중앙 정렬 */
-align-items: center;
+  .wrapper .item4 {
+    background-color: #1B3C73;
+  }
 
-}
+  #container {
+    height: 50vh;
+    /* 주축 row기준으로 양 끝 여백 없이 동일한 간격으로 정렬 */
+    justify-content: space-between;
+    /* 교차축 기준 중앙 정렬 */
+    align-items: center;
 
-#container .item1{
-  /* 자식인 플렉스 아이템에 적용. 교차축 기준 개별 배치 */
-  align-self: flex-start;
-}
-#container .item2{
-  align-self: flex-end;
-}
-#container .item3{
-  align-self: center;
-  width: 20vw; height: 15vw;
-}
-#container .item4{
-  align-self: stretch;
-}
+  }
+
+  #container .item1 {
+    /* 자식인 플렉스 아이템에 적용. 교차축 기준 개별 배치 */
+    align-self: flex-start;
+  }
+
+  #container .item2 {
+    align-self: flex-end;
+  }
+
+  #container .item3 {
+    align-self: center;
+    width: 20vw;
+    height: 15vw;
+  }
+
+  #container .item4 {
+    align-self: stretch;
+  }
 </style>
 
 <body>
@@ -69,4 +76,5 @@ align-items: center;
     <div class="item item4">item4</div>
   </div>
 </body>
+
 </html>

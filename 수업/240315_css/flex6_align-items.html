@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>flex6_align-items(교차축)</title>
 </head>
 <style>
-body {
-  margin: 0;
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-}
+  body {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+  }
 
-.wrapper {
-  border: 6px solid #000;
-  width: 80vw;
-  margin: 2vw auto;
+  .wrapper {
+    border: 6px solid #000;
+    width: 80vw;
+    margin: 2vw auto;
 
-  display: flex;
-  flex-flow: row row nowrap;
-  height: 40vh;
-  /* 주축기준 중앙 정렬 */
-  justify-content: center;
-  /* 플렉스 아이템 사이의 여백 10px*/
-  gap: 10px;
+    display: flex;
+    flex-flow: row row nowrap;
+    height: 40vh;
+    /* 주축기준 중앙 정렬 */
+    justify-content: center;
+    /* 플렉스 아이템 사이의 여백 10px*/
+    gap: 10px;
 
-}
+  }
 
-.wrapper .item1 {
-  background-color: #FFB5DA;
-}
+  .wrapper .item1 {
+    background-color: #FFB5DA;
+  }
 
-.wrapper .item2 {
-  background-color: #FF7ED4;
-}
+  .wrapper .item2 {
+    background-color: #FF7ED4;
+  }
 
-.wrapper .item3 {
-  background-color: #FF3EA5;
-}
-#container1{
-  /* 교차죽 기준 아이템 하나씩 정렬 */
-  align-items: stretch; /* 기본값. 아이템 높이 값이 없어도 컨테이너의 높이 값만큼 아이템 정렬 */
-  align-items: flex-start; /* 교차축 기준 시작점 부터 정렬 */
-  align-items: flex-end; /* 교차축 기준 끝점부터 정렬 */
-  align-items: center; /* 교차축 기준 중앙 정렬 */
-}
-#container2{
- /* display: block; */
+  .wrapper .item3 {
+    background-color: #FF3EA5;
+  }
 
- /* 주축 세로 */
- flex-direction: column;
+  #container1 {
+    /* 교차죽 기준 아이템 하나씩 정렬 */
+    align-items: stretch;
+    /* 기본값. 아이템 높이 값이 없어도 컨테이너의 높이 값만큼 아이템 정렬 */
+    align-items: flex-start;
+    /* 교차축 기준 시작점 부터 정렬 */
+    align-items: flex-end;
+    /* 교차축 기준 끝점부터 정렬 */
+    align-items: center;
+    /* 교차축 기준 중앙 정렬 */
+  }
 
- /* 주축col, 교차축row */
- align-items: stretch;
- align-items: flex-start;
- align-items: flex-end;
- align-items: center;
+  #container2 {
+    /* display: block; */
 
-}
+    /* 주축 세로 */
+    flex-direction: column;
 
+    /* 주축col, 교차축row */
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
 
+  }
 </style>
+
 <body>
   <h1>flex6 : align-items </h1>
   <div class="wrapper" id="container1"><!-- flex contatiner -->
@@ -71,9 +77,10 @@ body {
 
 
   <div class="wrapper" id="container2">
-    <div class="item item1">item1</div> 
-    <div class="item item2">item2</div> 
-    <div class="item item3">item3</div> 
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
   </div>
 </body>
+
 </html>

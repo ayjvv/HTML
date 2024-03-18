@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flex8</title>
+</head>
+<style>
+  
+  /* .box1{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid black;
+    width: 70vw;
+    height: 50vh;
+    flex-direction: column;
+    
+  }
+    
+
+
+   .box{
+    background-color: blue;
+    font-size: 2rem;
+    width: 300px; height: 3rem;
+   } */
+
+   /* body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+
+   .box1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 3px solid #222;
+    width: 90vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .box{
+    background-color: blue;
+    width: 300px; 
+   } */
+
+body{
+  text-align: center;
+}
+.container{
+  border: 3px solid #222;
+  margin: 0 auto;
+  width: 640px; height: 500px;
+
+  display: flex;
+  flex-flow: column wrap; /* flex-direction, flex-wrap */
+  justify-content: space-evenly;
+  align-content: space-evenly;
+
+}
+
+.container figure{
+   margin: 0;
+}
+.container figure img{
+  vertical-align: top;
+}
+
+.container figure figcaption{
+  background-color: #000;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 5px 0;
+  
+}
+
+
+</style>
+
+<body>
+  <!-- <h1>상하 정렬 갤러리</h1>
+  
+<div class="box1">
+
+ <img src="https://placehold.co/300x200/A26EA1/fff?text=img1&font=Lora" alt="img1"><div class=" box">title1</div>
+
+<img src="https://placehold.co/300x200/F18A9B/fff?text=img2" alt="img2"><div class=" box">title2</div>
+
+ <img src="https://placehold.co/300x200/FFB480/fff?text=img3" alt="img3"><div class=" box">title3</div>
+<img src="https://placehold.co/300x200/FFFF9D/fff?text=img4" alt="img4"><div class=" box">title4</div>
+
+</div> -->
+
+<h1>상하 정렬 갤러리</h1>
+
+<div class="container">
+  <figure>
+    <img src="https://placehold.co/300x200/A26EA1/fff?text=img1&font=Lora">
+    <figcaption>title1</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/F18A9B/fff?text=img2&font=Lora">
+    <figcaption>title2</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/FFB480/fff?text=img3&font=Lora">
+    <figcaption>title3</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/FFFF9D/fff?text=img4&font=Lora">
+    <figcaption>title4</figcaption>
+  </figure>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>flexEx6</title>
+  <style>
+    /* body {
+      margin: 0;
+    }
+
+    form .box {
+      border: #222 solid 1px;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      margin: 0;
+    }
+
+    form .box .box1 {
+      background-color: blueviolet;
+      width: 15vw;
+      color: #fff;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form .box .box2 {
+      background-color: coral;
+      padding: 10px;
+      width: 100vw;
+    }
+
+    form .box .box3 {
+      background-color: aquamarine;
+      width: 10vw;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .box2 button[type=submit]:hover {
+      background-color: orange;
+      color: #fff;
+    }
+
+    .box2 input[type=text] {
+      outline: none;
+      margin-right: 3px;
+      border: 1px solid #222;
+      border-right: none;
+      padding-top: 3.5px;
+    }
+
+    .box2 button[type=submit] {
+      border: 1px solid #222;
+    } */
+
+
+    body{
+      margin: 0;
+      text-align: center;
+    }
+    header{ /* flex container */
+      display: flex;
+      background-color: thistle;
+      /* justify-content: space-between; */
+    }
+    header h1{
+      background-color:#008DDA;
+      margin: 0;
+      font-size: 2.5rem;
+      /* width: 10vw; */
+      width: 7rem; height: 5rem;
+      /* aspect-ratio: 2 / 1; */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    header form{
+      /* background-color: #41C9E2; */
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      /* width: calc(100% - 7rem - 5rem); */
+
+    }
+    /* header * form{
+      form 하위 요소에 각 각에 적용
+    } */
+
+    header form [type]{
+      outline: none;
+      font-size: 1.3rem;
+      font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+      border: 1px #222 solid;
+      height: 40px;
+      padding: 0 10px;
+    }
+    header form button[type=submit]{
+      border-left: none;
+      width: 80px;
+      cursor: pointer;
+    }
+
+    header form button[type=submit]:hover{
+      background-color: blue;
+      color: #fff;
+    }
+
+    header nav{
+      background-color: #ACE2E1;
+      width: 5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-left: auto;
+      
+    }
+
+
+  </style>
+</head>
+
+
+<body>
+  <!-- <form>
+    <ul class="box">
+      <li class="box1">로고</li>
+      <li class="box2"><input type="text"><button type="submit">검색</button></li>
+      <li class="box3">메뉴</li>
+    </ul>
+  </form> -->
+
+  <header> <!-- flex container -->
+    <h1>로고</h1> <!-- flex item --> <!-- flex container -->
+    <form><!-- flex item --> <!-- flex container -->
+      <input type="search" autofocus placeholder="검색어를 입력하세요"> <!-- flex item -->
+      <button type="submit">검색</button> <!-- flex item -->
+      <!-- input 과 button은 인라인이라서 서로 떨어져있음 -->
+    </form>
+    <nav>메뉴</nav><!-- flex item -->
+  </header>
+</body>
+
+</html>

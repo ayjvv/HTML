@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx7</title>
+  <style>
+    /* body{
+      text-transform: capitalize;
+      font-weight: bold;
+      margin: 0;
+    }
+    ul{
+      list-style:none;
+      padding-left: 0;
+      margin:0;
+    }
+    .box{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      background-color: skyblue;
+      padding: 10px;
+      height: 40px;
+    }
+    li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    a{
+      text-decoration: none;
+      color: #222;
+      width: 140px;
+      height: 40px;
+      line-height: 40px;
+    }
+    a:hover{
+      background-color: blue;
+      color: #fff;
+    } */
+
+    body{
+      margin: 0;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      text-align: center;
+    }
+    .gnb{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #6196A6;
+      /* height: 60px; */
+      width: 100%;
+    
+
+      display: flex;
+      /* justify-content: space-evenly; */
+      /* align-items: center; */
+    }
+
+    .gnb li{
+      /* display: flex; */
+      width: 20%;
+    }
+
+    .gnb li a{
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 60px;
+      line-height: 60px;
+      /* 부모는 자식의 높이 값을 가져와 본인의 높이 값을 정하기 때문에 a의 높이 값이 곧 li의 높이 값, .gnb의 높이 값이 됨. */
+    }
+
+    .gnb li a:hover{
+      background-color: blue;
+      color: #fff;
+    }
+    
+  
+    
+
+  </style>
+</head>
+
+<body>
+  <ul class="gnb">
+    <li><a href="#">home</a></li>
+    <li><a href="#">company</a></li>
+    <li><a href="#">product</a></li>
+    <li><a href="#">service</a></li>
+    <li><a href="#">board</a></li>
+  </ul>
+</body>
+</html>

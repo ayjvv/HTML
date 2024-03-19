@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>flex8</title>
+</head>
+<style>
+  /* body{
+  text-align: center;
+}
+.container{
+  border: 3px solid #222;
+  margin: 0 auto;
+  width: 1000px; height: 500px;
+
+  display: flex;
+  flex-flow: row wrap; flex-direction, flex-wrap
+  justify-content: space-evenly;
+  align-content: space-evenly;
+
+}
+
+.container figure{
+   margin: 0;
+}
+.container figure img{
+  vertical-align: top;
+}
+
+.container figure figcaption{
+  background-color: #000;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 5px 0;
+  
+} */
+
+  body {
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .gallery {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid #000;
+    width: 80vw;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+  }
+
+  .gallery li {
+    background-color: #ddd;
+    margin: 1%;
+    width: 31.333333%;
+  }
+
+  .gallery li img {
+    vertical-align: bottom;
+    /* 글자의 꼬리가 남아있는 여백 */
+    width: 100%;
+    /* max-width: 100%; 이미지가 맥스라서 안됨*/
+  }
+
+  .gallery li h3 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+  }
+</style>
+
+<body>
+
+
+  <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+
+  <!-- <div class="container">
+  <figure>
+    <img src="https://placehold.co/300x200/A26EA1/fff?text=img1&font=Lora">
+    <figcaption>title1</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/F18A9B/fff?text=img2&font=Lora">
+    <figcaption>title2</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/FFB480/fff?text=img3&font=Lora">
+    <figcaption>title3</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/FFFF9D/fff?text=img4&font=Lora">
+    <figcaption>title4</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/FFC700/fff?text=img5&font=Lora">
+    <figcaption>title6</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/300x200/4CCD99/fff?text=img6&font=Lora">
+    <figcaption>title6</figcaption>
+  </figure>
+</div> -->
+
+  <ul class="gallery">
+    <li>
+      <img src="https://placehold.co/300x200/A26EA1/fff?text=img1&font=Lora" alt="img1">
+      <h3>title1</h3>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/F18A9B/fff?text=img2&font=Lora" alt="img2">
+      <h3>title2</h3>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/FFB480/fff?text=img3&font=Lora" alt="img3">
+      <h3>title3</h3>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/FFFF9D/fff?text=img4&font=Lora" alt="img4">
+      <h3>title4</h3>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/FFC700/fff?text=img5&font=Lora" alt="img5">
+      <h3>title5</h3>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/4CCD99/fff?text=img6&font=Lora" alt="img6">
+      <h3>title6</h3>
+    </li>
+  </ul>
+
+</body>
+
+</html>

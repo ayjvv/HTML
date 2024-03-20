@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>backgroundEx</title>
+  <style>
+    html {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+
+    body {
+      width: 80%;
+      border: 3px pink solid;
+      background-image: url(./images/나무질감.jpg);
+
+    }
+
+
+    .container {
+      background-color: #EABE6C;
+
+    }
+
+    header {
+      background-color: #891652;
+      height: 10vh;
+      color: #fff;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    aside {
+      background-color: #fff;
+      width: 30%;
+      list-style: none;
+      border-left: 1px solid red;
+    }
+
+    .gnb1 {
+      list-style: none;
+      padding: 0;
+    }
+
+    .gnb {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #222;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      color: #891652;
+      font-weight: bold;
+      padding: 0 30px;
+    }
+
+    article {
+      background-color: #ddd;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      padding: 30px;
+    }
+
+    .contents {
+      display: flex;
+    }
+
+    aside h2 {
+      color: red;
+      padding: 8px;
+      margin: 8px 0;
+    }
+
+    .gnb1 li {
+      border-bottom: red 2px solid;
+      padding: 8px;
+    }
+
+    .gnb1 li:hover {
+      background-color: red;
+      color: #fff;
+    }
+
+    .container article h2 {
+      padding: 0;
+    }
+
+    .gnb2 {
+      list-style: none;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #891652;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 5px;
+
+    }
+
+    .gnb a:hover {
+      background-color: red;
+      color: #fff;
+    }
+
+    /* .box1{
+  border: red solid 1px;
+  background-color: #fff;
+  width: 400px;
+ } */
+    figcaption {
+      text-align: right;
+      color: gray;
+
+    }
+
+    .text {
+      color: red;
+      margin: 5px 0;
+    }
+
+    p {
+      margin: 5px;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .box1 {
+      width: 0px;
+      border: 2px solid red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <h2>Kim's Kitchen<br>
+        cooking class</h2>
+    </header>
+    <ul class="gnb">
+      <li><a href="#">홈</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="#">교실</a></li>
+      <li><a href="#">케이터링</a></li>
+      <li><a href="#">연락처</a></li>
+    </ul>
+
+    <div class="contents">
+
+      <article>
+
+
+        <h2>채식주의자</h2>
+        <p class="text">런던에서의 5주코스</p>
+        <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
+
+        <h2>소스 마스터클래스</h2>
+        <p class="text">1일 워크샵</p>
+        <p>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</p>
+
+      </article>
+      <aside>
+        <h2>인기요리별</h2>
+        <ul class="gnb1">
+          <li>후라이드</li>
+          <li>고추바사삭</li>
+          <li>뿌링클</li>
+          <li>간지</li>
+        </ul>
+
+        <h2>연락처</h2>
+        <ul class="gnb2">
+          <li>경기 수원시 팔달구 매산동</li>
+        </ul>
+      </aside>
+    </div>
+    <footer>ⓒKim's Kitchen 김씨네 키친</footer>
+</body>
+
+</html>

@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <title>backgroundEx</title>
   <style>
-    html {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-    }
+  
 
     body {
-      width: 80%;
+      width: 70%;
       border: 3px pink solid;
-      background-image: url(./images/나무질감.jpg);
+      background-image: url(./images/나무질감.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      margin: 10px auto;
 
     }
 
@@ -26,7 +26,7 @@
 
     header {
       background-color: #891652;
-      height: 10vh;
+      padding: 5px;
       color: #fff;
     }
 
@@ -62,17 +62,20 @@
       line-height: 30px;
       color: #891652;
       font-weight: bold;
-      padding: 0 30px;
+      padding: 0 25px;
     }
 
     article {
       background-color: #ddd;
       width: 70%;
-      display: flex;
-      flex-direction: column;
-      align-content: flex-start;
       padding: 30px;
+      /* display: flex;
+      height: 600px;
+      justify-content: space-evenly;
+      align-items: center; */
     }
+    
+
 
     .contents {
       display: flex;
@@ -117,11 +120,7 @@
       color: #fff;
     }
 
-    /* .box1{
-  border: red solid 1px;
-  background-color: #fff;
-  width: 400px;
- } */
+
     figcaption {
       text-align: right;
       color: gray;
@@ -130,18 +129,49 @@
 
     .text {
       color: red;
-      margin: 5px 0;
+      margin: 10px 0;
+      padding: 10px;
     }
 
     p {
-      margin: 5px;
       font-size: 1rem;
       margin: 0;
+
     }
 
     .box1 {
-      width: 0px;
-      border: 2px solid red;
+      list-style: none;
+      padding: 0;
+      border: red solid 1px;
+      text-align: center;
+      width: 240px;
+      padding-top: 3px;
+      background-color: #fff;
+    }
+  
+    .text li{
+      color: #222;
+      list-style: none;
+      padding: 10px 0;
+    }
+    .text li:nth-child(1){
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .text li:nth-child(2){
+     color: red;
+     font-weight: bold;
+    }
+    .text li:nth-child(1){
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    img{
+      width: 230px;
+    }
+    figcaption{
+      padding-right: 10px;
     }
   </style>
 </head>
@@ -162,18 +192,30 @@
     </ul>
 
     <div class="contents">
-
+      
       <article>
+      <ul class="box1">
+        <li><img src="./images/샐러드.png"></li>
+        <li><figcaption><em>Oriental salad</em></figcaption></li>
+      </ul>
 
+        <ul class="text">
+          <li>채식주의자</li>
+          <li>런던에서의 5주코스</li>
+          <li>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</li>
+        </ul>
+        
+      <ul class="box1">
+        <li><img src="./images/소스.png"></li>
+        <li><figcaption><em>Teriyaki</em></figcaption></li>
+      </ul>
 
-        <h2>채식주의자</h2>
-        <p class="text">런던에서의 5주코스</p>
-        <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
-
-        <h2>소스 마스터클래스</h2>
-        <p class="text">1일 워크샵</p>
-        <p>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</p>
-
+      <ul class="text">
+        <li>소스 마스터클래스</li>
+        <li>1일 워크샵</li>
+        <li>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</li>
+    </ul>
+      
       </article>
       <aside>
         <h2>인기요리별</h2>

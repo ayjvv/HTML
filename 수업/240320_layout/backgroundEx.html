@@ -2,229 +2,269 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <title>backgroundEx</title>
-  <style>
-  
+    <meta charset="UTF-8">
+    <title>backgroundEx</title>
+    <style>
+        body {
+            width: 750px;
+            margin: 20px auto;
+            background-image: url(./images/나무질감.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-    body {
-      width: 60%;
-      border: 3px pink solid;
-      background-image: url(./images/나무질감.png);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      margin: 10px auto;
+        .wrapper {
+            list-style: none;
+            padding: 0;
+        }
 
-    }
+        .box1 {
+            display: flex;
+        }
+
+        .wrapper li {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            border: 3px solid pink;
+        }
+
+        .box {
+            list-style: none;
+            padding: 0;
+        }
+
+        header {
+            background-color: blueviolet;
+            padding-left: 10px;
+            color: #fff;
+        }
+
+        .gnb {
+            display: flex;
+
+        }
+
+        .box2 {
+            background-color: burlywood;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .box2 li a {
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            padding: 0 25px;
+        }
+
+        .box2 li a {
+            text-decoration: none;
+            color: darkmagenta;
+            font-weight: bold;
+        }
+
+        .box2 li a:hover {
+            background: red;
+            color: #fff;
+        }
+
+        article {
+            background-color: #ddd;
+            padding: 8px 0 40px 0;
+        }
+
+        .box3,
+        .box5 {
+            border: 1px solid red;
+            padding: 5px;
+            width: 180px;
+            text-align: center;
+            background-color: #fff;
+            margin: 10px
+        }
+
+        .box3 li,
+        .box5 li {
+            color: gray;
+        }
+
+        article h2 {
+            margin: 0;
+        }
+
+        .box4,
+        .box6 {
+            padding: 0 5px;
+        }
+
+        .box4 li,
+        .box6 li {
+            padding: 0 5px 8px;
+        }
 
 
-    .container {
-      background-color: #EABE6C;
+        aside {
+            background-color: #fff;
+            width: 50%;
+            border-left: 1px red solid;
 
-    }
+        }
 
-    header {
-      background-color: #891652;
-      padding: 5px;
-      color: #fff;
-    }
+        footer {
+            background-color: blueviolet;
+            color: #fff;
+            padding: 5px;
+            font-size: 0.8rem;
+        }
 
-    h2 {
-      margin: 0;
-    }
+        header h2,
+        p,
+        .box2 {
+            margin: 0;
+        }
 
-    aside {
-      background-color: #fff;
-      width: 30%;
-      /* height: 500px; */
-      list-style: none;
-      border-left: 1px solid red;
-    }
+        aside h2 {
+            color: red;
+            padding: 10px;
+        }
 
-    .gnb1 {
-      list-style: none;
-      padding: 0;
-    }
+        aside .box7 li {
+            border-bottom: red 2px solid;
+            padding: 10px;
+        }
 
-    .gnb {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: flex-start;
-      margin: 0;
-    }
+        aside .box8 {
+            padding: 10px;
+        }
 
-    a {
-      text-decoration: none;
-      color: #222;
-      display: block;
-      height: 30px;
-      line-height: 30px;
-      color: #891652;
-      font-weight: bold;
-      padding: 0 25px;
-    }
+        .box7 li:hover {
+            background-color: red;
+            color: #fff;
+        }
 
-    article {
-      background-color: #ddd;
-      width: 70%;
-      height: 450px;
-      padding: 30px;
-      /* display: flex;
-      height: 600px;
-      justify-content: space-evenly;
-      align-items: center; */
-    }
-    
+        .box4 li:nth-child(2) {
+            color: red;
+            font-weight: bold;
+        }
 
+        .box6 li:nth-child(2) {
+            color: red;
+            font-weight: bold;
+        }
 
-    .contents {
-      display: flex;
-    }
+        .box4 li:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
 
-    aside h2 {
-      color: red;
-      padding: 8px;
-      margin: 8px 0;
-    }
+        .box6 li:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
 
-    .gnb1 li {
-      border-bottom: red 2px solid;
-      padding: 8px;
-    }
+        .one {
+            display: flex;
+        }
 
-    .gnb1 li:hover {
-      background-color: red;
-      color: #fff;
-    }
+        .two {
+            display: flex;
+        }
 
-    .container article h2 {
-      padding: 0;
-    }
+        .box3 li:nth-child(2) {
+            text-align: right;
+        }
 
-    .gnb2 {
-      list-style: none;
-      padding: 10px;
-      font-weight: bold;
-    }
-
-    footer {
-      background-color: #891652;
-      color: #fff;
-      font-size: 0.8rem;
-      padding: 5px;
-
-    }
-
-    .gnb a:hover {
-      background-color: red;
-      color: #fff;
-    }
-
-    .text {
-      color: red;
-      margin: 10px 0;
-      padding: 10px;
-    }
-
-    p {
-      font-size: 1rem;
-      margin: 0;
-
-    }
-
-  
-    .text li{
-      color: #222;
-      list-style: none;
-      padding: 10px 0;
-    }
-    .text li:nth-child(1){
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    .text li:nth-child(2){
-     color: red;
-     font-weight: bold;
-    }
-    .text li:nth-child(1){
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-  /* li{
-    list-style: none;
-  } */
-
-  
-  </style>
+        .box5 li:nth-child(2) {
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <header>
-      <h2>Kim's Kitchen<br>
-        cooking class</h2>
-    </header>
-    <ul class="gnb">
-      <li><a href="#">홈</a></li>
-      <li><a href="#">소개</a></li>
-      <li><a href="#">교실</a></li>
-      <li><a href="#">케이터링</a></li>
-      <li><a href="#">연락처</a></li>
-    </ul>
+    <div class="container">
+        <header>
+            <div class="box box1">
+                <ul class="wrapper">
+                    <li><img src="./images/로고.png"></li>
+                </ul>
 
-    <div class="contents">
-      
-      <article>
+                <ul class="wrapper">
+                    <li>Kim's Kitchen</li>
+                    <li>cooking class</lu>
+                </ul>
+            </div>
 
-<<<<<<< HEAD
-        
-        <h2>채식주의자</h2>
-        <p class="text">런던에서의 5주코스</p>
-        <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
-=======
-        <!-- <ul class="box1">
-          <li><img src="./images/샐러드.png"></li>
-          <li><figcaption><em>Oriental salad</em></figcaption></li>
-        </ul> -->
+        </header>
 
-        <ul class="text">
-          <li>채식주의자</li>
-          <li>런던에서의 5주코스</li>
-          <li>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</li>
-        </ul>
->>>>>>> bb67e5fd6a530f8614c3eb6d0cc3a59e8428e8dc
-
-        <!-- <ul class="box1">
-          <li><img src="./images/소스.png"></li>
-          <li><figcaption><em>Teriyaki</em></figcaption></li>
-        </ul> -->
-
-      <ul class="text">
-        <li>소스 마스터클래스</li>
-        <li>1일 워크샵</li>
-        <li>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</li>
-    </ul>
-      
-      </article>
-      <aside>
-        <h2>인기요리별</h2>
-        <ul class="gnb1">
-          <li>후라이드</li>
-          <li>고추바사삭</li>
-          <li>뿌링클</li>
-          <li>간지</li>
+        <ul class="box box2">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">교실</a></li>
+            <li><a href="#">케이터링</a></li>
+            <li><a href="#">연락처</a></li>
         </ul>
 
-        <h2>연락처</h2>
-        <ul class="gnb2">
-          <li>경기 수원시 팔달구 매산동</li>
-        </ul>
-      </aside>
+        <div class="gnb">
+            <article>
+                <div class="one">
+                    <ul class="box box3">
+                        <li><img src="./images/샐러드.png"></li>
+                        <li><em>Oriental salad</em></li>
+                    </ul>
+
+
+
+                    <ul class="box box4">
+                        <li>채식주의자</li>
+                        <li>런던에서의 5주코스</li>
+                        <li>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</li>
+                    </ul>
+                </div>
+
+                <div class="two">
+                    <ul class="box box5">
+                        <li><img src="./images/소스.png"></li>
+                        <li><em>Oriental salad</em></li>
+                    </ul>
+
+
+                    <ul class="box box6">
+                        <li>소스 마스터클래스</li>
+                        <li>1일 워크샵</li>
+                        <li>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</li>
+                    </ul>
+                </div>
+
+
+
+            </article>
+
+            <aside>
+                <h2>인기요리법</h2>
+                <ul class="box box7">
+                    <li>후라이드</li>
+                    <li>고추바사삭</li>
+                    <li>양념치킨</li>
+                    <li>뿌링클</li>
+                </ul>
+
+                <h2>연락처</h2>
+                <ul class="box box8">
+                    <li>경기 수원시 팔달구 매산동</li>
+                </ul>
+            </aside>
+        </div>
+
+
+
+        <footer>ⓒKim's Kitchen 김씨네 키친</footer>
     </div>
-    <footer>ⓒKim's Kitchen 김씨네 키친</footer>
+
 </body>
 
 </html>

@@ -37,10 +37,11 @@
   */
 
 
-/* font-family: "Norican", cursive;
-  font-family: "Twinkle Star", cursive; */
-
-@import url('https://fonts.googleapis.com/css2?family=Norican&family=Petrona:ital,wght@0,100..900;1,100..900&family=Sofadi+One&display=swap');
+/* 
+  font-family: "Norican", cursive;
+  font-family: "Twinkle Star", cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Twinkle+Star&display=swap');
 
 @font-face {
   font-family: 'GmarketSans';/* 내가 설정한 이름 */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx1</title>
+  <style>
+    .container{
+      list-style: none;
+      padding: 0;
+      width: 400px; height: 400px;
+      background-color: orange;
+      margin: 50px auto;
+      position: relative;
+    }
+    .box{
+      background-color: red;
+      width: 50px; height: 50px;
+      /* position: relative; */
+      /* right: 0; */
+      font-weight: bold;
+      line-height: 50px;
+      text-align: center;
+    }
+    .box1{
+      position: fixed;
+    }
+    .box2{
+      position: absolute;
+      right: 0;
+    }
+    .box3{
+      position: absolute;
+      bottom: 0;
+    }
+    .box4{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .box5{
+      position: absolute;
+      top: 175px;
+      right: 175px;
+    }
+  </style>
+</head>
+<body>
+  
+  <ul class="container">
+    <li class="box box1">1</li>
+    <li class="box box2">2</li>
+    <li class="box box3">3</li>
+    <li class="box box4">4</li>
+    <li class="box box5">5</li>
+  </ul>
+</body>
+</html>

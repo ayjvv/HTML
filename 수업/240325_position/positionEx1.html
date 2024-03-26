@@ -11,37 +11,40 @@
       background-color: orange;
       margin: 50px auto;
       position: relative;
+      /* 위치특성을 안쓰면 그냥 일반적인 흐름을 갖는다. */
+      font-weight: bold;
     }
-    .box{
+    .container .box{
       background-color: red;
       width: 50px; height: 50px;
-      /* position: relative; */
-      /* right: 0; */
-      font-weight: bold;
       line-height: 50px;
       text-align: center;
-    }
-    .box1{
-      position: fixed;
-    }
-    .box2{
+      /* display: flex;
+      justify-content: center;
+      align-items: center; */
       position: absolute;
+    }
+    .container .box1{
+      top: 0; left: 0;
+    }
+    .container .box2{
       right: 0;
     }
-    .box3{
-      position: absolute;
+    .container .box3{
       bottom: 0;
     }
-    .box4{
-      position: absolute;
+    .container .box4{
       bottom: 0;
       right: 0;
     }
 
-    .box5{
-      position: absolute;
-      top: 175px;
-      right: 175px;
+    .container .box5{
+      /* top: 175px; right: 175px; */
+      /* top:50% left:50%
+      magin-top: -25px magin-left: -25px */
+      top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto; 
+      /* 높이 값이 있어야만 세로 중앙 정렬 가능 */
     }
   </style>
 </head>

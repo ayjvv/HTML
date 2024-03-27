@@ -4,15 +4,92 @@
   <meta charset="UTF-8">
   <title>positionEx8</title>
 </head>
+<style>
+  body{
+    margin: 0;
+  }
+  header{
+    position: sticky;
+    top: 0;
+    background-color: pink;
+    height: 100px;
+    z-index: 10;
+  }
+  header h2{
+    margin: 0;
+    background-color: skyblue;
+    width: 70px; height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    top: 40px; left: 300px;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  .container{
+    display: flex;
+    margin: 0;
+    /* justify-content: end; */
+    position: absolute;
+    top: 40px; right: 80px;
+  }
+  .container li{
+    background-color: red;
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .container li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  .container li:hover{
+    background-color: antiquewhite;
+  }
+  .wrapper{
+    display: flex;
+    margin: 0;
+    position: absolute;
+    top:0; right: 80px;
+  }
+  button{
+    border-style: none;
+    background-color: orange;
+    padding: 5px;
+  }
+  button:hover{
+    color: #fff;
+  }
+  article{
+    position: sticky;
+    text-align: center;
+    padding: 100px;
+    height: 200vh;
+    font-size: 3rem;
+  }
+
+</style>
 <body>
   <header>
     <h2>로고</h2>
-    <ul class="contianer">
+    <ul class="wrapper">
+      <li><button type="submit">로그인</button></li>
+      <li><button type="reset">회원가입</button></li>
+    </ul>
+    <ul class="container">
       <li><a href="#">menu1</a></li>
       <li><a href="#">menu2</a></li>
       <li><a href="#">menu3</a></li>
       <li><a href="#">menu4</a></li>
     </ul>
-  </header>
+    </header>
+    <article>
+      <h1>main</h1>
+    </article>
 </body>
 </html>

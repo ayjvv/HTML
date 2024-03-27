@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>position-sticky2</title>
+  <style>
+    body, h1 ,h2{
+      margin: 0;
+    }
+    header, footer{
+      background-color:#B08BBB;
+      padding: 20px; height: 100px;
+    }
+    main{ border: 6px solid #222; display: flex;}
+    main aside{
+      background-color: #F6DEF6;
+      flex-grow: 1;
+      padding: 20px;
+      height: 300vh;
+    }
+    main article{ /* flex-item */
+      background-color: #CFF6CF;
+      flex-grow: 3;
+      padding: 20px;
+      height: 800px;
+
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+    }
+    main article .relative{position: relative; background-color: #CCEEBC;}
+    main article .fixed{
+      background-color: #8CC0DE;
+      position: fixed; /* flex와 fixed가 동시 적용시 flexd 우선 */
+      left: 130px;
+    }
+    main article .absolute{
+      background-color: #FFD9C0;
+      position: absolute; /* flex와 asolute가 동시 적용시 absolute 우선 */
+      left: 200px;
+      top:20px;
+    }
+    main article .sticky{
+      background-color: #FAF0D7;
+      position: sticky;
+      left: 310px; /* 이 값이 sticky의 고정값으로 작동하려면 가로 스크롤 필요 */
+      top:20px;
+      }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>position-sticky2</h1>
+    <h2>header</h2>
+  </header>
+  <main>
+    <article>
+      <h2 class="relative">relative</h2>
+      <h2 class="fixed">fixed</h2>
+      <h2 class="absolute">absolute</h2>
+      <h2 class="sticky">sticky</h2>
+    </article>
+    <aside>
+      <h2>aside</h2>
+    </aside>
+  </main>
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>

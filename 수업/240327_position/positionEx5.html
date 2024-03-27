@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx5</title>
+</head>
+<style>
+  /* body{
+    margin: 0 auto;
+  }
+  header{
+    text-align: center;
+    background-color: blue;
+    color: #fff;
+    padding: 30px;
+  }
+  .container{
+    position: sticky;
+    top:0;
+  }
+  header h1{
+    margin: 0;
+  }
+  .container ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    
+  }
+  .container ul li{
+    width: 25%;
+  }
+  .container ul a{
+    text-decoration: none;
+    background-color: blueviolet;
+    color: #fff;
+    text-transform: capitalize;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+ 
+  body p{
+    width: 500px;
+    margin: 50px auto;
+  }
+  .container ul a:hover{
+    background-color: #FF95C5;
+  } */
+
+  body, h1{
+    margin: 0; padding: 0;
+    line-height: 1.6;
+    text-transform: capitalize;
+  }
+  h1{
+    background-color: orange;
+    text-align: center;
+    padding: 50px 0;
+  }
+  .gnb{
+    list-style: none;
+    margin: 0; padding: 0;
+
+    display: flex;
+    position: sticky;
+    top: 0;
+  }
+  .gnb li{
+    width: 25%;
+    /* width: 100vw; 스크롤을 인식을 못하기 때문에 가로에도 스크롤이 생길 수 았음 */
+    text-align: center;
+  }
+  .gnb li a{
+    /* width: 25vw; 100vw가 되면 가로 스크롤이 생기기 때문에 사용x */
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: tomato;
+    color: #fff;
+    padding: 10px 0;
+  }
+  .gnb li a:hover{
+    background-color: orangered;
+  }
+  .container{
+    width: 50%;
+    margin: 50px auto;
+  }
+  .container p{
+    margin: 100px 0;
+  }
+
+</style>
+<body>
+  <!-- <header>
+    <h1>LayoutEx1</h1>
+  </header>
+  <div class="container">
+    <ul>
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </div> -->
+  <h1>positionEx5</h1>
+  <ul class="gnb">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </ul>
+
+
+  <div class="container">
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+  
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+  
+  <p>근로자는 근로조건의 향상을 위하여 자주적인 단결권·단체교섭권 및 단체행동권을 가진다. 이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다. 국민의 자유와 권리는 헌법에 열거되지 아니한 이유로 경시되지 아니한다. 모든 국민은 법률이 정하는 바에 의하여 국가기관에 문서로 청원할 권리를 가진다.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+  
+/* reset */
+@import url('../asset/styles/reset.css');
+
+/* fonts */
+@import url('../asset/styles/spoqaHanSans.css');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/******** global ********/
+body{
+  line-height: 1.6;
+  text-align: center;
+  font-family: 'SpoqaHanSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', '맑은 고딕', 돋움,  sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+
+
+/****** article ******/
+article {
+  font-weight: 700;
+  font-size: 4rem;
+  height: 300vh;
+  margin-top: 200px;
+}
+
+
+
+/****** article ******/
+.wrapper{
+  background-color: pink;
+  width: 100%;
+  /* 자식의 높이값 가져옴 */
+  /* height: 110px; */
+  position: fixed;
+  top: 0;
+}
+.wrapper header{
+  /* background-color: #ddd; */
+  min-width: 700px;
+  max-width: 1180px;
+  height: 110px;
+  margin: 0 auto;
+
+  position: relative; /* 현재 요소의 흐름에 영향을 주지 않고 자식 포지션의 기준이 됨 */
+}
+.wrapper header h1{
+  font-weight: 700;
+  width: 120px; height: 60px;
+  line-height: 60px;
+  background-color: #C6EBC5;
+  font-size: 1.5rem;
+
+  position: absolute;
+  left: 0; bottom: 14px;
+}
+
+/* 로그인 회원가입 */
+.wrapper header .user-menu{
+  font-weight: 300;
+  font-size: 0.9rem;
+  background-color: #FFAF45;
+  color: #fff;
+  display: flex;
+  padding: 6px 10px;
+
+  position: absolute;
+  top:0; right: 0;
+}
+.wrapper header .user-menu li{
+  position: relative;
+  padding: 0 6px;
+}
+.wrapper header .user-menu li:first-child{
+  padding-right: 8px;
+}
+.wrapper header .user-menu li:first-child::after{
+  content: "";
+  background-color: #fff;
+  width: 2px; height: 16px;
+  position: absolute;
+  top: 0; bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.wrapper header .user-menu li a:hover{
+  color: #D875C7;
+}
+
+/* 메뉴 */
+.wrapper header .gnb{
+  font-family:"Oswald", Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  right: 0; bottom: 14px;
+  width: 520px;
+  background-color: #FA7070;
+  color: #fff;
+}
+
+.wrapper header .gnb li{
+  flex-grow: 1;
+  /* width: 25%; */
+}
+.wrapper header .gnb li a{
+  display: block;
+  height: 54px;
+  line-height: 54px;
+  
+}
+.wrapper header .gnb li a:hover{
+  background-color: #D895DA;
+}

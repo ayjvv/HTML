@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
-@import url('../asset/styles/reset.css');
-@import url('../asset/styles/spoqaHanSans.css');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/* reset */
+/* @import url('../asset/styles/reset.css'); */
+
+/* fonts */
+/* @import url('../asset/styles/spoqaHanSans.css');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); */
 
 
 body{

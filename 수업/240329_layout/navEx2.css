@@ -45,7 +45,7 @@ h1{
   /* flex-grow: 1; */
   width: 150px;
 }
-.main-menu li a{
+.main-menu > li > a{
   display: block;
   height: 50px;
   line-height: 50px;
@@ -64,9 +64,27 @@ h1{
 
 /* 각 각의 소메뉴 */
 .main-menu li .sub-menu{
-  /* display: none; */
+  display: none;
+}
+/* 각 대메뉴에 마우스를 올리면, 해당 대메뉴의 소메뉴가 나타남 */
+.main-menu li:hover .sub-menu{
+  display: block;
+}
+/* .main-menu li a:hover + .sub-menu */
+
+.main-menu li .sub-menu a {
+  display: block;
+  background-color: #BED7DC;
+  font-style: 1.2rem;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #fff;
+}
+.main-menu li .sub-menu a:hover{
+  background-color: rgb(210, 237, 241);
 }
 
-
-
-/* 각 대메뉴에 마우스를 올리면, 해당 대메뉴의 소메뉴가 나타남 */
+.main-menu li .sub-menu li:last-child a{
+  border-bottom: none;
+}

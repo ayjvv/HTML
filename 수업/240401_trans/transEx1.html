@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>transEx1</title>
   <style>
-    .container{
+    /* .container{
       border: 2px solid #000;
       width: 800px;
     }
@@ -26,6 +26,35 @@
     .container:hover .item{
       transition: 1s;
       transform: rotate(180deg) translate(-50%);
+    } */
+
+    .container{
+      border: 3px solid #000;
+      width: 95vw;
+    }
+
+    .container .item{
+      width: 100px; height: 100px;
+      font-weight: bold; font-size: 1.1rem;
+      text-align: center;
+      color: #fff;
+      margin: 10px;
+      transition: 1s linear;
+
+      /* position: relative;
+      left: 0; */
+    }
+    .container .item:nth-child(1){ background-color:#FB9AD1;}
+    .container .item:nth-child(2){ background-color: #BC7FCD;transition-delay: .5s;}
+
+    /* container 위에 마우스를 올리면, 아이템이~ */
+    .container:hover .item{
+      /* 
+      margin-left: 500px;
+      position: relative;
+      left: 500px; 
+      */
+      transform: translateX(calc(95vw - 120px)) rotate(1080deg);
     }
 
   </style>

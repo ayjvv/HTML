@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transEx5</title>
+  <!-- <link rel="stylesheet" href="transEx5.css"> -->
+  <style>
+    h1{text-align: center;}
+    .products{
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      border: 3px solid #000;
+
+      display: flex;
+      width: 80vw;
+      max-width: 1200px;
+      background-color: #BED7DC;
+    }
+
+    .products .item{
+      /* flex-basis: 33.3333%; */
+      /* width: calc(33.3333% - 2vw);
+      flex-shrink: 0; */
+      width: 33%;
+      margin: 1vw;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      /* height 값을 모름 */
+    }
+    .products .item img{
+      width: 100%;
+      /* display: block; */
+      vertical-align: top; /* 이미지가 갖고있는 행간 */
+    }
+    .products .item .txt-box{
+      background-color: rgb(0, 0, 0,0.8);
+      color: #fff;
+      transition: 0.3s;
+      padding: 1vw;
+      aspect-ratio: 1 /1 ;
+      /* display: none; */
+    }
+    .products .item:hover .txt-box{
+      transform: translateY(-100%);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- 마우스를 올리면 아래에서 위로가격 레이어가 올라옴
+  일정사이즈 이상으로 커지지 않음
+  <h1>transEx5</h1>
+  <ul class="products">
+    <li><img src="./images/shoes1.jpg">
+      <ul class="box">
+        <li>조던 1 하이</li>
+        <li>지난번에 기회를 놓쳤어도 걱정하지 마세요</li>
+        <li>가격: 109,000<
+          
+          display: fle
+          width: 80vw;
+          max-width: 1200p
+          background-color: #dddx;x;/li>
+      </ul>
+
+      .products .item{
+        width:
+        margin: 1vw; ;
+      }
+      .products .item img{
+        width: 100%;
+      }
+      .products .item .txt-box{}
+    </li>
+    <li><img src="./images/shoes2.jpg">
+      <ul class="box">
+        <li>조던 2 하이</li>
+        <li>지난번에 기회를 놓쳤어도 걱정하지 마세요</li>
+        <li>가격: 109,000</li>
+      </ul>
+    </li>
+    <li><img src="./images/shoes3.jpg">
+      <ul class="box">
+        <li>조던 3 하이</li>
+        <li>지난번에 기회를 놓쳤어도 걱정하지 마세요</li>
+        <li>가격: 109,000</li>
+      </ul>
+    </li>
+  </ul> -->
+  <h1>transEx5</h1>
+  <ul class="products">
+    <li class="item">
+      <img src="./images/shoes1.jpg">
+      <div class="txt-box">
+        <h3>조던 1 하이</h3>
+        <p class="desc">지난번에 기회를 놓쳤어도 걱정하지 마세요</p>
+        <p class="price">가격: 109,000원</p>
+      </div>
+    </li>
+    <li class="item">
+      <img src="./images/shoes2.jpg">
+      <div class="txt-box">
+        <h3>나이키 덩크 로우 레트로</h3>
+        <p class="desc">하드우드를 위해 태어나 스트리트로 무대를 옮겨온 나이키 덩크 로우 레트로</p>
+        <p class="price">가격: 129,000원</p>
+      </div>
+    </li>
+    <li class="item">
+      <img src="./images/shoes3.jpg">
+      <div class="txt-box">
+        <h3>나이키 인빈서블 3</h3>
+        <p class="desc">러닝 내내 최상의 쿠셔닝을 선사하는 인빈서블 3은 발 아래 최고의 편안함을 선사</p>
+        <p class="price">가격: 209,000원</p>
+      </div>
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+  
+body{
+  background: linear-gradient(-15deg, #FFBFBF 30%, #FFE5E5);
+  height: 100vh;
+}
+.profile-wrapper{
+  background-color: #fff;
+  max-width: 500px;
+  min-width: 400px;
+  margin: 50px auto;
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.024),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.033),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.039),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.045),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.052),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+position: relative; /* 이미지의 기준 */
+overflow: hidden;
+}
+/* 텍스트박스 */
+.profile-wrapper .txt-box{
+  width: 50%;
+  padding: 20px;
+}
+.profile-wrapper .txt-box h2{
+  font-family: "gstatic", serif;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-style: italic;
+  border-bottom: 1px solid #000;
+  padding-left: 6px;
+}
+.profile-wrapper .txt-box p{
+  margin: 24px 0 24px 6px;
+  line-height: 1.6;
+}
+/* icons */
+.profile-wrapper .txt-box .sns-group{
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: ; */
+}
+.profile-wrapper .txt-box .sns-group a{
+  display: block;
+  margin-right: 3vw;
+}
+
+.profile-wrapper .txt-box .sns-group a span{
+  color: #000;
+  font-size: 1.8rem;
+}
+.profile-wrapper .txt-box .sns-group li:last-child a{
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+.profile-wrapper .txt-box .sns-group li:last-child span{
+  font-size: 1.7rem;
+}
+
+.profile-wrapper .txt-box .sns-group li:first-child span{
+  font-size: 1.9rem;
+}
+/* font icons: 서체의 속성으로 제어 가능한 아이콘 ex) google icons, font awesome.. */
+
+.profile-wrapper h3{
+  background-color: #000;
+  color: #fff;
+  font-family: "gstatic", serif;
+  padding: 4px 20px;
+}
+.profile-wrapper .img-box{
+  border: 6px solid #000;
+  background: url(./images/다운로드.jpg) no-repeat 50% / 400px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 50%; right: -30%;
+  transform: translateY(-50%);
+
+  transition: 0.3s;
+}
+.profile-wrapper:hover .img-box{
+  right: -28%;
+}
+
+.profile-wrapper .txt-box .sns-group a:hover span{
+  color: #FFBFBF;
+}

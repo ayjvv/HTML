@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniEx3</title>
+  <style>
+    /* body{
+      overflow: hidden;
+    }
+    .box1{
+      position: absolute;
+      top: 210px; left: 220px;
+    }
+
+    .box2{
+      position: absolute;
+      top:610px; left: 130px; 
+      animation: box3 3s infinite;
+    }
+    .box3{
+      position: absolute;
+      top:610px; left: 600px; 
+      animation: box3 1s infinite;
+    }
+    .box4{
+      position: absolute;
+      top: 0;  right: 0;
+
+      animation: box4 1s infinite alternate;
+    }
+
+    @keyframes box4{
+      0%{
+        transform: scale(0.3);
+      }
+      100%{
+        transform: scale(1) rotate(360deg);
+      }
+    }
+    .class{
+      animation: class 3s infinite;
+    }
+
+    @keyframes class{
+    
+      100%{
+        transform: translate(100%);
+      }
+    }
+
+    @keyframes box3{
+      100%{
+        transform: rotate(360deg);
+      }
+    } */
+
+    body{margin: 0;}
+
+    .container{
+      height: 100vh;
+      display: flex;
+      /* align-items: flex-start; */
+      align-items: center;
+      overflow: hidden;
+    }
+    .container .bicycle-wrapper{
+      animation: move 4s infinite linear;
+      z-index: 99;
+
+      position: relative;
+    }
+    .container .bicycle-wrapper .bicycle-wheel{
+      position: absolute;
+       bottom: -89px; left: -91px;
+       /* transform: translate(-50% 50%); */
+       animation: spin infinite 1s linear;
+    }
+    .container .bicycle-wrapper .bicycle-wheel:last-child{
+      left: auto; /* right 값을 주면 left도 자동, 기존 left 무력화*/
+      right: -91px;
+    }
+
+    .container .fireworks{
+      margin: 20px 20px auto auto; /* flex-item 일때만 가능 */
+      /* align-self: flex-start; */
+
+      animation: scale 3s infinite alternate;
+    }
+
+    @keyframes scale{
+      0%{
+        opacity: 0;
+      }
+      100%{
+        transform: rotate(360deg) scale(0.5);
+        opacity: 1;
+      }
+    }
+
+    @keyframes spin{
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes move{
+      0%{opacity: 0;
+      left: -10%;}
+      10%{opacity: 1;
+      left: 0;}
+      80%{opacity: 1;
+      left: 100%;}
+      100%{opacity: 0;
+      left: 110%;}
+      
+    }
+  </style>
+</head>
+<body>
+  <!-- <img src="./images/fireworks.png" alt="불꽃" class="box4">
+  <div class="class">  
+  <img src="./images/bicycle.png" alt="자전거" class="box1">
+  <img src="./images/wheel.png" alt="바퀴" class="box2">
+  <img src="./images/wheel.png" alt="바퀴" class="box3"> -->
+
+
+  <div class="container">
+    <div class="bicycle-wrapper">
+      <img src="./images/bicycle.png" alt="자전거 바디" class="bicycle-body">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="bicycle-wheel">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="bicycle-wheel">
+    </div>
+    <img src="./images/fireworks.png" alt="불꽃" class="fireworks">
+  </div>
+</div>
+</body>
+</html>

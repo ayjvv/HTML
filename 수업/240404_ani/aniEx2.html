@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniEx2</title>
+  <style>
+    /* body{
+      background-color: #000;
+    }
+    .box{
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    li{
+      color: #fff;
+      font-size: 8rem;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    li:hover{
+      animation: ani1 0.1s infinite ease-in-out alternate;
+    }
+
+    @keyframes ani1{
+      20%{
+        text-shadow: -5px -5px red;
+      }
+      40%{
+        text-shadow: -8px -8px blue;
+      }
+      100%{
+        text-shadow: 5px 5px yellow;
+      }
+    } */
+
+    body{
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-size: 13rem;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-transform: uppercase;
+    }
+    .txt-wrapper span:hover{
+      animation: neon infinite 0.3s;
+    }
+
+    @keyframes neon{
+      0%{ text-shadow: 5px 5px #45FFCA, -5px -6px #FF55BB;}
+      25%{ text-shadow: -5px 1px #FEFFAC, 5px 6px #FFD3A3; }
+      50%{ text-shadow: 5px 4px #FFB6D9, -8px 10px #FCFFB2;}
+      75%{ text-shadow: -8px -4px #D67BFF, -5px -4px #B6EAFA;}
+      100%{ text-shadow: -5px -6px #7091F5, 10px -14px #E384FF;}
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- <ul class="box">
+    <li>c</li>
+    <li>s</li>
+    <li>s</li>
+    <li>3</li>
+  </ul> -->
+  <div class="txt-wrapper">
+    <span>c</span>
+    <span>s</span>
+    <span>s</span>
+    <span>3</span>
+  </div>
+</body>
+</html>

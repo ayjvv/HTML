@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniEx1</title>
+  <style>
+    /* body{
+      margin: 0;
+      background-image: linear-gradient(-190deg, #F7418F, #FEC7B4);
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation: ani1 1s ease;
+    }
+    .btn{
+      margin: 0 auto;
+      text-decoration: none;
+      color: #fff;
+      border: #fff solid 2px;
+      display: block;
+      width: 80px; height: 30px;
+      text-align: center;
+      line-height: 30px;
+    }
+    .btn:hover{
+      border-radius: 30px;
+    }
+
+    @keyframes ani1{
+      100%{
+        background-image: linear-gradient(-190deg, #6AD4DD, #FFEBB2);
+      }
+    } */
+
+    @keyframes gradient{
+      30%{
+        background-position: 0 50%;
+      } 60%{
+        background-position: 100% 50%;
+      } 100%{
+        background-position: 0 30%;
+      }
+    }
+    body{
+      margin: 0;
+      background-image: linear-gradient(-125deg, #86469C 10%, #6AD4DD 40%, #FFCDEA );
+      background-size: 400%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      animation: gradient 10s infinite ease-in-out alternate;
+    }
+
+    .btn{
+      color: #fff;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: bold;
+      border: 6px solid #fff;
+      padding: 10px 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      border-radius: ;
+    }
+
+
+
+    
+  </style>
+</head>
+<body>
+  <a href="#" class="btn">aniEx1</a>
+</body>
+</html>

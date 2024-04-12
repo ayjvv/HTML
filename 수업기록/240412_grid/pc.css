@@ -1,0 +1,12 @@
+@charset "UTF-8";
+  
+h1{
+  background-color: #FF3EA5;
+  padding: 50px;
+}
+h2{
+  display: none;
+}
+.container{
+  grid-template-columns: repeat(3, 1fr);
+}

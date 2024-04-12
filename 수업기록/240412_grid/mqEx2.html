@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>mqEx2</title>
+  <style>
+    body{
+      text-align: center;
+      margin: 0;
+    }
+    .container{
+      display: grid;
+      grid-auto-rows: 50vh 25vh 25vh;
+    }
+    .item{
+      font-weight: bold;
+    }
+    .item1{
+      background-color: blue;
+    }
+    .item2{
+      background-color: skyblue;
+    }
+    .item3{
+      background-color: yellow;
+    }
+
+    @media screen and (min-width: 768px){
+      .container{
+        grid-auto-rows: 25vh 25vh;
+        grid-template-columns: 1fr 3fr;
+      }
+      .item1{
+        grid-row: 1 / 3;
+      }
+      .item3{
+        grid-column: 2 / 3;
+      }
+    }
+
+    @media (width >= 1200px){
+      .container{
+        width: 800px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 2fr;
+      }
+      .item1{
+        grid-column: 2 / 3;
+      }
+      .item3{
+        grid-column: 1 / 2;
+      }
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>mqEx4</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    body{
+      background: url(./images/하이라이트.png) no-repeat 50% / cover;
+      height: 100vh;
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .global-menu{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .global-menu li{
+      border-bottom: #fff solid 1px;
+    }
+    .global-menu li a{
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      display: block;
+      padding: 10px;
+    }
+    .mobile-btn{
+      background-color: #7469B6;
+      text-decoration: none;
+      color: #fff;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      display: block;
+      padding: 10px;
+      border-bottom: solid #fff 1px;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .mobile-btn span{
+      position: absolute;
+      bottom: 7px; right: 10px;
+    }
+
+
+    @media (min-width: 768px){
+      .global-menu{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: 3px solid #fff;
+      }
+      .global-menu li{
+        border-right: #fff solid 1px;
+      }
+      .global-menu li:nth-child(5){
+        border-bottom: none;
+      }
+      .global-menu li:nth-child(even){
+        border-right: none;
+      }
+      .mobile-btn{
+        display: none;
+      }
+    }
+
+    @media (min-width: 1200px){
+      .global-menu{
+        display: flex;
+        justify-content: center;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .global-menu li{
+        border-bottom: none;
+        width: 150px;
+      }
+      .global-menu li a{
+        text-align: center;
+      }
+      .global-menu li:nth-child(even){
+        border-right: 1px solid #fff;
+      }
+      .global-menu li:nth-child(5){
+        border-right: none;
+      }
+      .global-menu li a:hover{
+        background-color: #7469B6;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <ul class="global-menu">
+    <li><a href="#">home</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">service</a></li>
+    <li><a href="#">product</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+  <a href="#" class="mobile-btn">menu<span class="material-symbols-outlined">
+    more_vert
+    </span></a>
+</body>
+</html>

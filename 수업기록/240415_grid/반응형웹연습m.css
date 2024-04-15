@@ -1,0 +1,90 @@
+@charset "UTF-8";
+  
+@media (min-width: 414px){
+  /* header */
+ .header{
+    background-color: #ddd;
+    height: 60px;
+    position: relative;
+  }
+  .header img{
+    position: absolute;
+    top: 0; left: 18px;
+    transform: translateY(-20%);
+  }
+  .header a span{
+    position: absolute;
+    top: 0; right: 14px;
+    transform: translateY(80%);
+  }
+  header .menu{
+    display: none;
+  }
+
+  /* contents */
+  /* main-img */
+  .main-img{
+    height: 799px;
+    background: url(https://placehold.co/414x799/FFD1E3/000) no-repeat 50% / cover;
+    position: relative;
+  }
+  .main-img .side li .item1{
+    position: absolute;
+    top: 50%; left: 5%;
+  }
+  .main-img .side li .item2{
+    position: absolute;
+    top: 50%; right: 5%;
+  }
+  .bottom li a{
+    position: absolute;
+    right: 50%; bottom: 0;
+  }
+  .txt-box .txt{
+    padding: 45px 35px;
+    border-bottom: 1px solid #ddd;
+  }
+  .txt-box .txt li:first-child{
+    font-weight: bold;
+    padding-bottom: 40px;
+    font-size: 2rem;
+  }
+  .img-box .img li img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .business{
+    text-align: center;
+    padding: 68px 42px;
+  }
+  .business h2{
+    font-size: 3rem;
+    margin-bottom: 77px;
+    position: relative;
+    text-transform: capitalize;
+  }
+  .business h2::after{
+    content: "";
+    width: 72px; height: 3px;
+    background-color: #000;
+    position: absolute;
+    top:90px; right: 50%;
+    transform: translateX(50%);
+    transition: 0.4s;
+  }
+  .box{
+    text-align: center;
+  }
+  .box li:nth-child(1){
+    margin: 30px;
+  }
+  .box li:nth-child(2){
+    font-weight: bold;
+
+  }
+  .box img{
+    display: flex;
+    margin: 0 auto;
+  }
+}

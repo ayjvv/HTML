@@ -1,0 +1,39 @@
+@charset "UTF-8";
+  
+/* font-family: "Barlow Condensed", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300&display=swap');
+
+body{
+  font-family: "Barlow Condensed", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 500;
+  font-size: 3ch;
+  text-transform: uppercase;
+  background: url(./images/하이라이트.png) no-repeat fixed 50% / cover;
+  /* height: 100vh; pull page에서만 사용 스크롤로 내리는 기본 사이트는 안씀 */
+  color: #fff;
+}
+
+nav .global-menu{
+  /* display: grid; */
+  display: none
+  /* grid-auto-rows: 40px; */
+}
+nav .global-menu.active{
+  display: grid;
+}
+nav a{
+  display: block;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  /* height: 40px; */
+  /* line-height: 40px; */
+  /* display: grid;
+  align-items: center; */
+}
+nav .global-menu li{}
+nav .global-menu li a{}
+nav .mobile-btn{
+
+  background: rgb(116, 105, 182,0.7) url(./images/ellipsis.svg)  no-repeat 98% 50% / 10px;
+}
+/* nav .mobile-btn::after{} */

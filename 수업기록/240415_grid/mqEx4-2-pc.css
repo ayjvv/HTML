@@ -1,0 +1,25 @@
+@charset "UTF-8";
+  
+
+@media (min-width: 1200px){
+  body{
+    font-weight: 600px;
+    font-size: 3.5ch;
+  }
+  nav .global-menu{
+    grid-template-columns: repeat(5, minmax(100px, 200px));
+    justify-content: center;
+  }
+  nav .global-menu li a{
+    border-right: 1px solid #fff;
+    display: grid;
+    place-items: center;
+    border-bottom: none;
+  }
+  nav .global-menu li a:hover{
+    background-color: rgb(169, 169, 169, 0.7);
+  }
+  nav .global-menu li:last-child a{
+    border-right: none;
+  }
+}

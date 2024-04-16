@@ -1,6 +1,6 @@
 @charset "UTF-8";
   
-@media (min-width: 414px){
+
   /* header */
  .header{
     /* background-color: #ddd; */
@@ -175,7 +175,7 @@
     justify-content: space-around;
     border-bottom: #adb5bd solid 1px;
     margin: 0 auto 30px;
-    width: 372px;
+    width: 50%;
   }
   .location-menu li a{
     text-transform: uppercase;
@@ -198,7 +198,7 @@
     padding: 20px;
   }
   .location-kakao #map {
-    width: 100%;
+    width: 80%;
     height: 400px;
     margin: 0 auto;
     border: 1px solid #000;
@@ -206,7 +206,9 @@
 
   /* information1 */
   .information1{
-    padding: 70px 20px 100px 20px;
+    padding: 70px 0 100px 0;
+    margin: 0 auto;
+    width: 80%;
   }
   .information1 .information2 li{
     border-bottom: #adb5bd solid 1px;
@@ -257,6 +259,7 @@
   /* dyami */
   .dyami{
     padding: 20px;
+    background-color: #e9ecef;
   }
   .dyami img{
     margin: 105px 0 150px 0;
@@ -296,4 +299,3 @@
     position: absolute;
     bottom: 32px; right: 30px;
   }
-}

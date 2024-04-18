@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* *** contents *** */
+
+/* main-slide */
+.main-slide{
+  margin-top: 60px;
+  height: 90vh;
+  background-color: orange;
+}
+
+/* main-intro */
+.main-intro .main-intro-wrapper li{
+  border-bottom: var(--color-gray-50) 1px solid;
+  padding: 10px 30px 30px;
+}
+.main-intro .main-intro-wrapper li:last-child{
+  border-bottom: none;
+}
+.main-intro .main-intro-wrapper li h3{
+  font-family: var(--font-m-en);
+  font-weight: 700;
+  font-size: var(--font-title-md);
+  margin: 20px 0 30px;
+}
+.main-intro .main-intro-wrapper li p{}
+
+/* main-grid  */
+.main-grid {}
+.main-grid .main-grid-wrapper{
+  gap: 8px;
+  /* grid-template-rows: repeat(3, 40vh) 20vh 20vh 40vh 40vh; */
+}
+.main-grid .main-grid-wrapper li{
+  background: no-repeat 50% / cover;
+  transition: 0.3s;
+  height: 40vh;
+}
+.main-grid .main-grid-wrapper .main-grid-bg1{background-image: url(./images/1.jpg);}
+.main-grid .main-grid-wrapper .main-grid-bg2{background-image: url(./images/2.jpg);}
+.main-grid .main-grid-wrapper .main-grid-bg3{background-image: url(./images/3.jpg);}
+.main-grid .main-grid-wrapper .main-grid-bg4{background-image: url(./images/4.jpg);
+height: 20vh;}
+.main-grid .main-grid-wrapper .main-grid-bg5{background-image: url(./images/5.jpg);
+height: 20vh;}
+.main-grid .main-grid-wrapper .main-grid-bg6{background-image: url(./images/6.jpg);}
+.main-grid .main-grid-wrapper .main-grid-bg7{background-image: url(./images/7.jpg);}
+.main-grid .main-grid-wrapper li h3{
+  display: grid;
+  place-items: center;
+  transition: 0.2s;
+  font-family: var(--font-m-en);
+  font-size: var(--font-title-md);
+  color: #000;
+  text-transform: capitalize;
+  height: 100%;
+
+  /* 요소 뒤 영역에 그래픽 효과 적용, 팝업창 뒷 배경 흐리게 처리할때 */
+  backdrop-filter: grayscale(50%) blur(2px);
+  background-color: rgb(255, 255, 255, 0.6);
+
+  display: none;
+}
+
+/* main-business */
+.main-business{}
+.main-business .main-business-list{
+  gap: 46px;
+  text-align: center;
+}
+.main-business .main-business-list strong{
+  display: block;
+}
+
+/* main-youtube */
+.main-youtube{}
+
+/* main-service */
+.main-service{}

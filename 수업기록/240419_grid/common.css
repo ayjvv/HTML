@@ -13,7 +13,7 @@ body{
 :root{
   --font-title-lg: 2.5rem;
   --font-title-md: 1rem; 
-  --font-title-sm: 0.8rem; 
+  --font-title-sm: 1rem; 
 
   --color-point-bg: #fff1f8;
   --color-point-line: #f2d3d8;
@@ -29,7 +29,6 @@ h2{
   font-weight: 300;
   font-size: var(--font-title-lg);
   margin: 0;
-
 }
 section{
   border-radius: 5px;
@@ -52,3 +51,4 @@ section p:last-child{
   margin: 0 8px;
   padding: 0 8px;
 }
+

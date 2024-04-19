@@ -36,6 +36,10 @@
     --bgcolor-light-gray:;
     --bgcolor-dark-gray:;
     --bgcolor-highlight:;
+
+    /* swiper */
+    --swiper-navigation-size: 30px;
+    --swiper-theme-color: maroon;
   }
 
 /* **** Global Style **** */
@@ -85,10 +89,10 @@ body{
 .magin-lg{
   margin: 0 38px;
 }
+
 .padding-sm{
   padding: 0 14px;
 }
-.padding-md{}
 
 
 .main-title{
@@ -113,5 +117,25 @@ body{
 
 /* 980 이상일 때 */
 @media (min-width: 960px){
+  :root{
+    --font-title-xlg: 3rem;
+    --font-title-lg: 2.5rem;
+    --font-title-md: 1.7rem;
+    --font-title-sm: 1.5rem;
+
+    --swiper-navigation-size: 50px;
+  }
+  .main-title{
+    margin-top: 100px
+  }
+  .main-des{
+    width: 40%;
+  }
+  html{
+    font-size: 18px;
+  }
+  .padding-sm{
+    padding: 0 33px;
+  }
 
 }

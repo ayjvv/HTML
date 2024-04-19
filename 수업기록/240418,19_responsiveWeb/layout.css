@@ -9,6 +9,7 @@
   height: 60px;
   justify-content: space-between;
   top: 0;
+  z-index: 999;
 }
 .header .logo a img{
   height: 22px;
@@ -56,7 +57,47 @@
 }
 
 /* *** footer *** */
-.footer{}
+.footer{
+  background-color: var(--color-gray-10);
+}
+.footer .footer-info{
+  grid-auto-rows: 150px;
+  align-items: end;
+  padding-bottom: 70px;
+}
+.footer .footer-info .footer-logo{
+  background: url(./images/logo.png) no-repeat 50% / contain;
+  text-indent: -9999px;
+  height: 36px; width: 120px;
+}
+.footer .footer-info .footer-info-list h3{
+  margin: 20px 0;
+}
+.footer .footer-info .footer-info-list .social-list{
+  gap: 20px;
+}
+.footer .footer-info .footer-info-list .social-list li a svg{
+  height: 20px;
+  fill: var(--color-gray-80);
+}
+.footer .footer-copyright{
+  background-color: var(--color-gray-50);
+  font-size: 14px;
+  text-align: center;
+  padding: 50px 0;
+}
+.footer .footer-copyright .footer-policy{
+  justify-content: center;
+  gap: 10px;
+}
+.footer .footer-copyright .footer-policy li:first-child::after{
+  content: "";
+  width: 1px; height: 10px;
+  background-color: var(--color-gray-80);
+  display: inline-block;
+  transform: rotate(15deg);
+  margin-left: 10px;
+}
 
 /* *** go-to-top *** */
 .go-to-top{
@@ -73,4 +114,43 @@
   /* background: var(--color-primary) url(./images/arrow_up.svg) no-repeat 50% 100% / 80%; */
   background-color: var(--color-primary);
   background-position: 50% 100%;
+}
+
+/* 980 이상일 때 */
+@media (min-width: 960px){
+/* *** header *** */
+  .header{
+    height: 80px;
+  }
+.header .logo a img{
+  height: 30px;
+}
+.header .header-nav .mobile-menu{
+  display: none;
+}
+.header .header-nav .global-menu{
+  display: flex;
+  gap: 20px;
+  position: static;
+}
+.header .header-nav .global-menu li{
+  border-bottom: none;
+}
+.header .header-nav a{
+  height: 79px;
+  /* height: 100%; 위로 올라가서 다 100%주고 인식하게 하는 법 */
+  padding: 0 20px;
+}
+.header .header-nav a:hover{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+
+  /* *** footer *** */
+  .footer .footer-info{
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    padding: 70px;
+  }
 }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>반응형 웹 연습</title>
+  <!-- vp -->
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <!-- favicon -->
   <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
@@ -19,12 +20,20 @@
   <!-- reset -->
   <!-- 성능 최적화를 고려한다면 link, 관리를 고려한다면 @import -->
   <link rel="stylesheet" href="../asset/styles/reset.css">
+  <!-- swiper css -->
+  <link href="
+https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.css
+" rel="stylesheet">
   <!-- 공통내용 -->
   <link rel="stylesheet" href="./common.css">
   <!-- layout: header, footer -->
   <link rel="stylesheet" href="./layout.css">
   <!-- layout: 현재페이지 -->
   <link rel="stylesheet" href="./index.css">
+
+  <!-- kakao js -->
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.1/swiper-bundle.min.js"></script>
 </head>
 <body>
   <!-- header -->
@@ -45,20 +54,34 @@
 
       <!-- mobile-menu -->
       <a href="#" class="mobile-menu">
-        <span>모바일 메뉴</span>
+        <spanclass="main-intro-wrapper"모바일 메뉴</span>
       </a>
     </nav>
   </header>
 
   <!-- contents -->
-  <!-- main-slide -->
-  <section class="main-slide">
-    <div class="main-swiper">main-swiper</div>
+   <!-- main-slide -->
+   <section class="main-slide">
+    <!-- 슬라이드 관련 -->
+    <div class="main-swiper swiper">
+      <!-- 슬라이드 이미지 -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide main-bg1">Slide 1</div>
+        <div class="swiper-slide main-bg2">Slide 2</div>
+        <div class="swiper-slide main-bg3">Slide 3</div>
+        <div class="swiper-slide main-bg4">Slide 4</div>
+      </div>
+      <!-- 슬라이드 페이지내이션 -->
+      <div class="swiper-pagination"></div>
+      <!-- 사이드 버튼(캐러셀) -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </section>
   
-  <!-- main-intro -->
-  <section class="main-intro magin-md">
-    <ul class="main-intro-wrapper">
+   <!-- main-intro -->
+   <section class="main-intro margin-md">
+    <ul class="main-intro-wrapper grid-container">
       <li>
         <h3>Branding</h3>
         <p>전직대통령의 신분과 예우에 관하여는 법률로 정한다. 제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다.</p>
@@ -142,12 +165,12 @@
   </section>
 
   <!-- main-youtube -->
-  <section class="main-youtube magin-lg">
-    <div class="main-youtube-text">
-      <h2 class="main-title">Our Youtube</h2>
+  <section class="main-youtube">
+    <div class="main-youtube-text magin-lg flex-container">
+      <h2 class="main-youtube-title">Our Youtube</h2>
       <p class="main-youtube-des">국채를 모집하거나 예산외에 국가의 부담이 될 계약을 체결하려 할 때에는 정부는 미리 국회의 의결을 얻어야 한다.이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다.</p>
     </div>
-    <div class="main-youtube-vedio">
+    <div class="main-youtube-vedio magin-lg">
       <iframe src="https://www.youtube.com/embed/olPe8g7A32E?si=DQLG3tx2g6lDhUap&amp;controls=0&mute=1&loop=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </section>
@@ -155,7 +178,7 @@
   <!-- main-service -->
   <section class="main-service">
     <h2 class="main-title">Our Service</h2>
-    <ul class="main-service-gallery magin-md">
+    <ul class="main-service-gallery magin-md flex-container">
       <li><a href="#"><img src="./images/img-05.jpg" alt="branding"></a>
       <div class="service-gallery-text">
         <h4>Branding</h4>
@@ -189,13 +212,14 @@
     </ul>
   </section>
 
-  <!-- main-location -->
-  <section class="main-location">
+   <!-- main-location -->
+   <section class="main-location">
+    <h2 class="main-title">Location</h2>
     <ul class="location-menu magin-lg">
-      <li class="location-office">
-        <h3>office</h3>
+      <li class="location-office active">
+        <h3>office</h3> 
         <div class="location-map tab-box">
-          <div class="kakao-map">카카오 지도</div>
+          <div class="kakao-map" id="map">카카오 지도</div>
           <ul class="location-office-info">
             <li><strong>ADDRESS</strong>795 Folsom Ave, Suite 600 San Francisco</li>
             <li><strong>TEL</strong>02-1234-5678</li>
@@ -216,7 +240,7 @@
 
   <!-- main-talk -->
   <section class="main-talk">
-    <div class="color-layer">
+    <div class="color-layer grid-container">
       <h2 class="main-talk-title">
         Let's talk</h2>
         <p>신체장애자 및 질병·노령 기타의 사유로 생활능력이 없는 국민은 법률이 정하는 바에 의하여 국가의 보호를 받는다.</p>
@@ -225,8 +249,8 @@
   </section>
 
   <!-- footer -->
-  <footer class="footer padding-sm">
-    <section class="footer-info">
+  <footer class="footer">
+    <section class="footer-info grid-container padding-sm">
     <h2 class="footer-logo">로고</h2>
     <div class="footer-info-list">
       <h3>CONTACT</h3>
@@ -238,7 +262,7 @@
     </div>
     <div class="footer-info-list">
       <h3>SOCIAL</h3>
-      <ul>
+      <ul class="social-list flex-container">
         <li><a href="#">
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
         </a></li>
@@ -256,7 +280,7 @@
     </section>
     <div class="footer-copyright">
       <p>Copyrights &copy; 2020 All Rights Reserved by DYAMI.</p>
-      <ul class="footer-policy">
+      <ul class="footer-policy flex-container">
         <li><a href="#">Terms of Use</a></li>
         <li><a href="#">Privacy Policy</a></li>
       </ul>
@@ -266,5 +290,59 @@
 
   <!-- 위로 go-to-top -->
   <a href="#" class="go-to-top">위로</a>
+
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=551d31581dbf51fa71f133043b10475e"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+      mapOption = {
+        center: new kakao.maps.LatLng(37.26815, 127.0003), // 지도의 중심좌표
+        level: 1, // 지도의 확대 레벨
+        mapTypeId: kakao.maps.MapTypeId.ROADMAP // 지도종류
+      };
+
+    // 지도를 생성한다 
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 지도 타입 변경 컨트롤을 생성한다
+    var mapTypeControl = new kakao.maps.MapTypeControl();
+
+    // 지도의 상단 우측에 지도 타입 변경 컨트롤을 추가한다
+    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+    // 지도에 확대 축소 컨트롤을 생성한다
+    var zoomControl = new kakao.maps.ZoomControl();
+
+    // 지도의 우측에 확대 축소 컨트롤을 추가한다
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+    // 지도에 마커를 생성하고 표시한다
+    var marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.26815, 127.0003), // 마커의 좌표
+      map: map // 마커를 표시할 지도 객체
+    });
+  </script>
+
+  <script>
+      // https://swiperjs.com/get-started
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,//반복
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  autoplay: {
+        delay: 2500, //2.5초
+        disableOnInteraction: false,
+      },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+  </script>
 </body>
 </html>

@@ -37,19 +37,20 @@
       break;
   } */
 
-  let msg = ''; 
-  num = Number(num);
+  let msg = '';
+    num = Number(num);
 
-  switch (num){
-  case 1:
-  case 2:
-  case 3:
-  case 4:
-    msg = `입력한 숫자는 ${num}입니다.`;
-    break;
-  default:
-    msg = `1~4까지의 숫자 중 하나만 입력해 주세요.`;
-  }
-  console.log(msg);
+    switch (num) {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+        msg = `입력한 숫자는 ${num}입니다.`;
+        break; 
+      default:  
+        msg = `1~4까지의 숫자 중 하나만 입력해 주세요.`;
+    }
+
+    console.log(msg);
   </script>
 </body>

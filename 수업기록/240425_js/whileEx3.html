@@ -1,0 +1,30 @@
+<body>
+  <h1>whileEx3</h1>
+  <script>
+    //2~9단까지 출력
+
+  /*   let i = 2;
+      while (i <= 9){
+      let j = 1;
+      while(j <= 9){
+        console.log(`${i}* ${j} = ${i * j}`);
+        j++;
+      }
+      i++;
+    } */
+
+    let i = 2;
+    let k = 1;
+    while (i <= 9){ // 2~9
+      console.log(`-- ${i}단 --`);
+
+      while (k <= 9){ // 1~9
+        console.log(`${i} * ${k} = ${i * k}`);
+        k++;
+      }
+      i++;
+      k = 1; //1로 초기화
+    } 
+
+  </script>
+</body>

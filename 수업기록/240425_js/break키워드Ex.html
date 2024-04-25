@@ -1,0 +1,39 @@
+<body>
+  <h1>break 키워드</h1>
+  <script>
+    /* 
+      0~100중에 3의 배수만 출력
+      40 이상인 경우 break 키워드를 사용하여 벗어남
+    */
+
+    //초기 값 설정
+    //100까지의 반복범위
+    //3의 배수만 출력
+
+/*     let total = '';
+    let i = 0;
+    
+    while(i <= 100){
+      if(i >= 40){
+        break;
+      }
+      total += i + ', ';
+      i +=3;
+    }
+    document.body.innerHTML += total; */
+
+    let total = '';
+    let i = 0;
+
+    for(let i = 0; i <= 100; i += 3){
+
+      if(i >= 40){
+        break;
+      }
+      total += i + ', ';
+    }
+
+    document.body.innerHTML = total;
+
+  </script>
+</body>

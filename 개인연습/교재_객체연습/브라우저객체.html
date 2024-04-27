@@ -1,0 +1,25 @@
+<body>
+    <h1>os_info</h1>
+    <script>
+    info = navigator.userAgent.toLowerCase(); // 운영체제 정보를 구합니다. 구현정보를 소문자로 지원합니다.
+	osImg = null;
+
+	if(info.indexOf('windows') >= 0) {
+		osImg = "windows.png";
+	} else if(info.indexOf('macintosh') >= 0) {
+		osImg = "macintosh.png";
+	} else if (info.indexOf('iphone') >= 0) {
+		osImg = "iphone.png";
+	} else if (info.indexOf('android') >= 0) {
+		osImg = "android.png";
+	} // 운영체제의 정보가 window라는 문자를 포함하고 있으면 osImg에 윈도우 이미지의 파일명이 저장됩니다.(나머지 경우도 동일)
+
+	document.write("<img src=\"images/" + osImg + "\">", "<br>");
+	var scr = screen;
+	var sc_w = scr.width;
+	var sc_h = scr.height; // src에 스크린 객체를 참조시킵니다. 그런다음 스크린 객체의 너비와 높이를 구해 각각의 변수 sc_W.sc_h 에 저장합니다.
+
+	document.write("모니터 해상도 너비:" + sc_w + "px", "<br>");
+	document.write("모니터 해상도 높이:" + sc_h + "px", "<br>");
+    </script>
+</body>

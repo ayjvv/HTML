@@ -1,0 +1,27 @@
+<body>
+    <h1>string_ob3</h1>
+    <script>
+        userEmail = prompt("당신의 이메일 주소는?");
+        arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+        check1 = false;
+	    check2 = false;
+
+        if( userEmail.indexOf("@") > 0 ) { check1=true; }// 이메일 유효성을 검사하여 "@"를 정삭적으로 작성했으면 check1에 true를 저장합니다.
+        
+
+    for(var i = 0; i < arrUrl.length; i++) { //arrUrl 의 데이터 개수(5)를 반환합니다.
+        if( userEmail.indexOf(arrUrl[i]) > 0 ) { //입력한 이메일과 단어를 하나씩 비교하여 1개의 단어라도 일치하면 check2에 true를 저장합니다.
+        check2 = true;
+        } 
+    }
+
+    if( check1 && check2 ) {
+    document.write( userEmail );
+    } else {
+    alert("이메일 형식이 잘못되었습니다.");
+    }
+
+
+    </script>
+</body>

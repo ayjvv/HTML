@@ -1,0 +1,41 @@
+<body>
+    <h1>객체 생성자 함수</h1>
+    <script>
+        function CheckWeight(name, height, weight) { //객체 생성자의 함수명은 소문자로 시작해도되지만 가능하면 대문자로 만드는 것이 좋습니다.(개발자 간의 약속.)
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;//생성한 객체에 이름, 키, 몸무게 등의 속성을 등록합니다.
+    
+            this.getInfo = function() {
+                var str = ""
+                    str += "이름: " + this.userName + ", ";
+                    str += "키: " + this.userHeight + ", ";
+                    str += "몸무게: " + this.userWeight + "<br>";
+                    return  str; //생성한 객체에 각 속성값을 출력하는 함수를 등록합니다.
+            }
+            this.getResult = function( ) {
+                this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+                this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+    
+                if(this.userWeight >= this.minWeight && 
+                this.userWeight <= this.maxWeight) {
+                    return "정상 몸무게입니다";
+                } else if(this.userWeight < this.minWeight) {
+                    return "정상 몸무게보다 미달입니다";
+                } else {
+                    return "정상 몸무게보다 초과입니다";
+                }
+            } // 정상몸무게, 표준 오차 몸무게를 구하여 몸무게가 정상인지 출력하는 함수를 등록합니다.
+        }
+    
+        var jang = new CheckWeight("장보리", 168, 62);
+        var park = new CheckWeight("박달재", 180, 88);
+        console.log(jang);
+        console.log(park);
+    
+        document.write(jang.getInfo());
+        document.write(jang.getResult());
+    </script>
+</body>

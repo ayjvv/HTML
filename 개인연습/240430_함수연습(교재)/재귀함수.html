@@ -1,0 +1,16 @@
+<body>
+    <h1>재귀함수</h1>
+    <script>
+        let num = 0;
+
+        function testFnc(){
+		num++;
+		document.write(num, "<br>"); 
+		if(num == 10) return; //num값이 10이되면 종료
+		
+		testFnc(); //함수를 다시 호출
+	}
+	testFnc();
+
+    </script>
+</body>

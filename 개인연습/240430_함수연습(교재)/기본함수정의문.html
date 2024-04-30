@@ -1,0 +1,32 @@
+<body>
+    <h1>기본함수 정의문</h1>
+
+
+    <script>
+        count = 0;
+
+        //함수 정의문 : 함수 호출문이 먼저나와도 호이스티 방식이 적용되어 정상적으로 함수를 호출합니다.
+        myFnc(); //함수 호출
+
+        function myFnc() {
+            count++;
+            document.write("hello" + count, "<br>");
+        }
+
+
+        //익명함수
+        myFnc(); //호출이 2번되어 hello1 , hello2 출력
+	
+	    var theFnc = function() {
+		count++;
+		document.write("bye" + count,"<br>");
+	    }
+	
+
+	    theFnc();//호이스팅 지원x 나중에 호출
+
+
+
+
+    </script>
+</body>

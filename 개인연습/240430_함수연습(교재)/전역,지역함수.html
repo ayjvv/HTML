@@ -1,0 +1,15 @@
+<body>
+    <h1>전역,지역함수</h1>
+    <script>
+    var num = 100;
+	function menu( ) {
+		num += 100;
+		alert(num);
+	}
+	menu(); //100 개발자 A 개발자B와 만든 함수명이 같아 개발자A가 만든 함수가 제거되고 개발자 B가 만든 함수가 호출
+
+	function menu( ) {
+		alert(num); //개발자 B 100
+	}
+    </script>
+</body>

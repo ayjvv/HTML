@@ -1,0 +1,66 @@
+@charset "UTF-8";
+  
+body{
+  text-align: center;
+}
+header,main{
+  height: 500px;
+  background-color: #ddd;
+  font-weight: bold;
+  font-size: 3rem;
+}
+main{
+  background-color: lightblue;
+}
+main, header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+/* 대메뉴 */
+nav{
+  position: fixed;
+  background-color: #F5DAD2;
+  width: 100%;
+  top: 0;
+  height: 60px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+nav a{
+  display: block;
+}
+nav .global-menu {
+  /* background-color: thistle; */
+  display: grid;
+  grid-template-columns: repeat(4 ,minmax(150px, 200px));
+  justify-content: center;
+}
+nav .global-menu li{
+  width: 100%;
+}
+nav .global-menu > li > a{
+  height: 60px;
+  line-height: 60px;
+}
+nav .global-menu > li > a:hover{
+  background-color: #fff;
+  color: thistle;
+}
+nav .global-menu li ul{
+}
+nav .global-menu li .sub-menu{
+  display: none;
+  background-color: #FFBB70;
+  height: 250px;
+}
+nav .global-menu li .sub-menu li{}
+nav .global-menu li .sub-menu li a{
+  font-weight: normal;
+  line-height: 50px;
+}
+nav .global-menu li .sub-menu li a:hover{
+  background-color: silver;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>attr2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    img{
+      height: 80vh;
+    }
+  </style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+<script>
+  $(function(){
+    $('.btn1').on('click', ()=>{
+      $('img').attr({ src : './images/하이라이트1.jpg', alt : 'img1'});
+    });
+    $('.btn2').on('click', ()=>{
+      $('img').attr({src : './images/하이라이트2.jpg', alt: 'img2'})
+    });
+  })
+</script>
+</head>
+<body>
+  <h1>attr2</h1>
+  <button class="btn1">이미지1</button>
+  <button class="btn2">이미지2</button>
+
+  <p><img src="" alt="img1"></p>
+</body>
+</html>

@@ -46,7 +46,7 @@
         // 다음 텍스트 조각 사이에 랜덤한 수의 공백 문자 추가
         if (i < amount - 1) { // amount-1인 이유 : amount만큼 랜덤 단어 생성시 공백은 amount-1
           // 사용자가 입력한 값 만큼 공백 생성
-          const spaces = Math.floor(Math.random() * amount);
+          const spaces = Math.floor(Math.random() * amount) + 1;
           // spaces 변수는 이 랜덤한 정수 값을 가지고 있으며, 이 값은 텍스트 조각 사이에 삽입할 공백의 수를 결정
           result += ' '.repeat(spaces);
         }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>slideUpDownEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../asset/styles/reset.css">
+  
+<style>
+  /* ul{
+    width: 300px;
+  }
+  h3{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #4F6F52;
+    padding:5px;
+    color: #fff;
+    border-bottom: 1px solid #B51B75;
+  }
+  p{
+    background-color: #E8DFCA;
+    height: 150px;
+    padding: 10px;
+    display: none;
+  } */
+
+  .side-menu{
+    background-color: #CDE8E5;
+    width: 250px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+  .side-menu h3{
+    background-color: #4D869C;
+    color: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .side-menu h3:hover{
+    background-color: #7AB2B2;
+  }
+  .side-menu p{
+    padding: 10px 10px 40px;
+    display: none;
+  }
+</style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+<script>
+  $(function(){
+    // 첫번째 제목을 클릭하면 첫번째 p가 내려가고 다른 p는 모두 올라감
+   /*  $('.side-menu li').eq(0).children('h3').on('click',()=>{
+      $('.side-menu li').eq(0).children('p').slideToggle();
+      $('.side-menu li').eq(1).children('p').slideUp();
+      $('.side-menu li').eq(2).children('p').slideUp();
+      $('.side-menu li').eq(3).children('p').slideUp();
+    });
+    $('.side-menu li').eq(1).children('h3').on('click',()=>{
+      $('.side-menu li').eq(1).children('p').slideToggle();
+      $('.side-menu li').eq(0).children('p').slideUp();
+      $('.side-menu li').eq(2).children('p').slideUp();
+      $('.side-menu li').eq(3).children('p').slideUp();
+    }); */
+
+  /* 
+      $('.side-menu h3').on('click', (e)=>{
+         $('.side-menu p').slideUp();
+          // 내가 클릭한 바로 그 h3의 바로 뒤 형제
+          $(e.target).next().stop().slideToggle();
+      });
+  */
+
+    $('.side-menu h3').on('click', (e)=>{
+      $(e.target).next('p').slideToggle().parent().siblings().find('p').slideUp();
+    });
+
+    // 1. 전부 닫고 내가 클릭한 것만 오픈
+    // 2. method chaning으로 클릭한 것 외 닫기
+  });
+  
+
+/*   $(function(){
+    $('.menu1').on('click', ()=>{
+      $('li:first-child > p').slideToggle();
+    });
+    $('.menu2').on('click', ()=>{
+      $('li:first-child > p').slideUp();
+      $('li:nth-child(2) > p').slideToggle();
+    });
+    $('.menu3').on('click', ()=>{
+      $('li:first-child > p, li:nth-child(2) > p ').slideUp();
+      $('li:nth-child(3) > p').slideToggle();
+    });
+    $('.menu4').on('click', ()=>{
+      $('li:first-child > p, li:nth-child(2) > p ,li:nth-child(3) > p').slideUp();
+      $('li:nth-child(4) > p').slideToggle();
+    });
+  }); */
+
+</script>
+</head>
+<body>
+  <!-- <ul>
+    <li>
+      <h3><a href="#" class="menu1">menu1</a></h3>
+      <p>부끄러운 불러봅니다 모두 별빛들 사랑과 하려다 만 우정의 청춘이 있습니다 부끄러운 불러봅니다 바람들과</p>
+    </li>
+    <li>
+      <h3><a href="#" class="menu2">menu2</a></h3>
+      <p>기울어진 한 마디의 지난 겨울에 동경과걱정도 사랑과 별들을 별 하나에 눈물과아침이없이</p>
+    </li>
+    <li>
+      <h3><a href="#" class="menu3">menu3</a></h3>
+      <p>햇살 속에담아 아무 없이 닮아 릴케의 모두 피어나듯이별들을 꽃들 속에서하나둘</p>
+    </li>
+    <li>
+      <h3><a href="#" class="menu4">menu4</a></h3>
+      <p>헤일 듯 여름 하나 별빛들 사랑과 계절이 이제 어머니 사랑과여름 하나 꽃들 속에서 지나가는</p>
+    </li>
+  </ul> -->
+
+  <ul class="side-menu">
+    <li role="button">
+      <h3>menu1</h3>
+      <p>부끄러운 불러봅니다 모두 별빛들 사랑과 하려다 만 우정의 청춘이 있습니다 부끄러운 불러봅니다 바람들과</p>
+    </li>
+    <li role="button">
+      <h3>menu2</h3>
+      <p>기울어진 한 마디의 지난 겨울에 동경과걱정도 사랑과 별들을 별 하나에 눈물과아침이없이</p>
+    </li>
+    <li role="button">
+      <h3>menu3</h3>
+      <p>햇살 속에담아 아무 없이 닮아 릴케의 모두 피어나듯이별들을 꽃들 속에서하나둘</p>
+    </li>
+    <li role="button">
+      <h3>menu4</h3>
+      <p>헤일 듯 여름 하나 별빛들 사랑과 계절이 이제 어머니 사랑과여름 하나 꽃들 속에서 지나가는</p>
+    </li>
+  </ul>
+</body>
+</html>

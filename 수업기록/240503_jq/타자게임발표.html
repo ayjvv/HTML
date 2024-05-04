@@ -100,31 +100,47 @@
     let randomNum = Math.floor(Math.random() * texts.length);
     displayText.innerHTML = texts[randomNum];
 
+    // 이 부분은 게임이 이미 진행 중인 경우에는 아무것도 하지 않고 함수를 종료합니다. 이것은 게임이 중복으로 시작되는 것을 방지하기 위한 체크입니다.
+    //return; 함수 강제 종료. 이 다음 구문 실행 x
     btn.addEventListener('click', function () {// 게임시작 버튼을 클릭하면
-      if (isPlaying) return; // isPlaying 값을 true로 할당
+      if (isPlaying) return; // isPlaying 값을 true로 할당/ 작성안했을 시 게임시작이 중복으로 발생
       btn.innerHTML = '게임중'; // 버튼의 값을 게임중으로 변경
       isPlaying = true;   // 게임진행중
-      timeDisplay.innerHTML = time;   // 초기타임 지정
+      timeDisplay.innerHTML = time;   // 초기타임 지정, 시간표시
       timeInterval = setInterval(timer, 1000);   // 1초마다 timer 함수를 실행
     })
+
+    /* return을 작성하지 않았을때 게임시작이 중복적으로 발생하였습니다.
+    그래서 코드를 다시 찾아보던 중에  return이 함수를 강제 종료시키고
+    그 다음 구문을 실행하지 않는다고 해서 게임이 진행중인 경우에는 
+    함수를 종료시켜라 라는 뜻에서 return을 작성하니까 게임이 정상적으로
+    실행 되었습니다. */
+
+
     function timer() { // 타이머 함수
       // 삼항 연산자. time(=30초)이 0 이상일 때 ture의 값 = 1초씩 줄어듬 : false일 때의 값 = 게임 종료
       time > 0 ? time-- : isPlaying = false;
       timeDisplay.innerHTML = time;
 
+
+      
       if (!isPlaying) { // 부정 연사자, 게임 종료 시
         btn.innerHTML = '게임종료'; // 버튼에 게임종료
         clearInterval(timeInterval);
-        /* 
-          게임 종료시 setInterval() 취소
-          1. 처음엔 작성하지 않았는데, 알림창이 계속 반복되고, 안닫힘. 게임을 새로 시작할 수 없게됨
-          2. 알림창을 지우고 확인해보니, 게임 시작으로 돌아가지 않아서 필수로 작성해야 함
-          그래서 책을 찾아보니, setInterval()함수 적용 시, clearInterval()을 사용하여 setInterval()취소 가능
-        */
         alert('게임이 종료되었습니다'); //추가적으로 알람창 출력
         location.reload(); //게임이 종료되면 다시 처음으로 돌아가 게임을 시작할 수 있게 함
+        /* 
+          처음에는  clearInterval(timeInterval);을 작성하지 않았는데
+          그러니까 알림창이 계속해서 반복되고 게임을 새로 시작할 수가 없었고
+          알림창을 지우고 다시봐도 게임시작으로 다시 돌아갈수가 없어서 코드를
+          다시 살펴보니 게임 종료가 되었을때는 setInterval()이 취소 되어야하는걸
+          깨달았고 책을 찾아보니setInterval()함수 적용 시, clearInterval()을 사용하여
+          setInterval()취소 가능하다는게 나와있어서 적용해보니 
+          게임을 새로 시작할수 있게 되었습니다.
+        */
       }
     }
+
     inputWord.addEventListener('input', function () {
       // input에 사용자가 값을 입력할 때의 이벤트 발생을 위해 addEventListener의 종류를 찾아보니 input이 나옴
       // 'input' = <input>,<textarea>요소 값이 변경되었을 때 

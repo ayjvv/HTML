@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>prependTo+appendToEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .gallery{
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 3px solid #000;
+    overflow: hidden;
+  }
+  .gallery li.style{
+    padding: 0;
+    list-style: none;
+  }
+  .gallery li img.style1{
+    width: 100%;
+    vertical-align: top;
+  }
+  .gallery .btn-group{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 40px;
+  }
+  .gallery .btn-group li{
+    position: absolute;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .gallery .btn-group li:nth-child(2){
+    right: 0;
+  }
+ 
+  .img-wrapper img{
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .gallery li.style{
+    margin: 0;
+    list-style: none;
+    vertical-align: top;
+  }
+
+  </style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <h1>prependTo+appendToEx2</h1>
+  <div class="gallery">
+    <ul class="btn-group">
+      <li>&lt;</li>
+      <li>&gt;</li>
+    </ul>
+    <ul class="img-wrapper">
+      <li><img src="./images/토토로1.jpg" alt="토토로1"></li>
+      <li><img src="./images/토토로2.jpg" alt="토토로2"></li>
+      <li><img src="./images/토토로3.jpg" alt="토토로3"></li>
+      <li><img src="./images/토토로4.jpg" alt="토토로4"></li>
+    </ul>
+  </div>
+</body>
+<script>
+  $('.btn-group li').on('click', ()=>{
+    $('.img-wrapper li').eq(0).appendTo('.gallery');
+    $('.gallery li').addClass('style');
+    $('.gallery li img').addClass('style1');
+  });
+</script>
+</html>

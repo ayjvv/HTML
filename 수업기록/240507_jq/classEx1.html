@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>classEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    /* .tab-menu{
+      display: flex;
+      width: 70vw;
+      margin: 50px auto;
+      position: relative;
+    }
+    .tab-menu h2{
+      text-align: center;
+      background-color: #CDE8E5;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      border-radius: 20px 20px 0 0;
+      padding: 10px;
+      width: calc(70vw / 3);
+    }
+
+    .tab-menu p{
+      background-color: #7AB2B2;
+      height: 150px;
+      padding: 10px;
+      position: absolute;
+      left: 0;
+    }
+    #tab1-html p, #tab1-css p, #tab1-js p{
+      display: none;
+    }
+    #tab1-css p.style1{
+      display: block;
+      background-color: #7AB2B2;
+    } */
+
+    .tab-menu {
+      list-style: none;
+      margin: 50px auto;
+      padding: 0;
+      position: relative;
+      padding-top: 50px;
+      width: 600px;
+    }
+    /* 각 영역의 제목 */
+    .tab-menu .title{
+      text-transform: uppercase;
+      margin: 0;
+      background-color:  #E1AFD1;
+      border-radius: 20px 20px 0 0;
+      padding: 10px;
+      text-align: center;
+      width: 199px; height: 50px;
+      box-sizing: border-box;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .tab-menu #tab-css .title{left: 200px;}
+    .tab-menu #tab-js .title{left: 400px;}
+    .tab-menu p{
+      margin: 0;
+      box-sizing: border-box;
+      background-color: #E1AFD1;
+      padding: 20px;
+      display: none;
+  
+    }
+    .tab-menu p strong{
+      display: block;
+      margin: 10px 0;
+    }
+    .tab-menu li.active h2, .tab-menu li.active p{
+      background-color: #AD88C6;
+      display: block;
+    }
+  </style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+  <ul class="tab-menu">
+    <li id="tab-hml" class="active">
+      <h2 class="title" role="button">html5</h2>
+      <p>
+        <strong>html5 Tutorial</strong>
+        <span>하려다 만 아무 햇살 속에 눈물과 합니다 지저귀는 지나가는 계십니다 별빛들 햇살 속에 시간의 합니다 없이 시간의 달의 햇살 속에</span>
+      </p>
+    </li>
+    <li id="tab-css">
+      <h2 class="title" role="button">css3</h2>
+      <p>
+        <strong>css3 Tutorial</strong>
+        <span>이름과 이름과 다하지 나는 지저귀는 있습니다 아침이 가을 속의 기울어진 계절이 비둘기들 나는 내일 시간의 삶 속의 가을 속의 봄이 오면 헤는 것은 달의 내일</span>
+      </p>
+    </li>
+    <li id="tab-js">
+      <h2 class="title" role="button">JavaScript</h2>
+      <p>
+        <strong>JS Tutorial</strong>
+        <span>닮아 피어나듯이 계십니다 모두 시간의 많은 가을로 하려다 만 합니다 언덕 남은 부끄러운 부끄러운 우정의 이름과 시선과 바람들과 까닭입니다 시선과 피어나듯이 바깥에서</span>
+      </p>
+    </li>
+  </ul>
+  
+  <script>
+
+  $(function(){
+  /*   $('.tab-menu li:first-child').on('click', ()=>{
+      $('.tab-menu li:first-child').addClass('active');
+      $('.tab-menu li:nth-child(2)').removeClass('active');
+      $('.tab-menu li:nth-child(3)').removeClass('active');
+    });
+    $('.tab-menu li').eq(1).on('click', ()=>{
+      $('.tab-menu li').removeClass('active');
+      $('.tab-menu li').eq(1).addClass('active')
+    });
+    $('.tab-menu li').eq(2).on('click', ()=>{
+      $('.tab-menu li').removeClass('active');
+      $('.tab-menu li').eq(2).addClass('active');
+    }); */
+
+    $('.tab-menu li').on('click', (e) => {
+      $('.tab-menu li').removeClass('active');
+      //e.target 내가 클릭한 바로 그 요소.
+      // $(e.target).parent().addClass('active');
+      //내가 클릭한 이벤트 리스너가 바인딩 된 그 요소
+      $(e.currentTarget).addClass('active');
+    }); 
+      
+  });
+    
+  </script>
+</body>
+</html>

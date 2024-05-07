@@ -132,7 +132,8 @@
 
       if (displayText.innerHTML === inputWord.value) {  // 랜덤단어 뜨는 곳과 input의 값이 일치할 때
         score += 1; //  점수를 1씩 더하기
-        let randomNum = Math.floor(Math.random() * texts.length); //랜덤 영단어
+        let randomNum = Math.floor(Math.random() * texts.length);
+        // 사용자가 입력한 단어가 일치할 경우 새로운 랜덤 단어 출력
         displayText.innerHTML = texts[randomNum];
         inputWord.value = ""; // 사용자가 정답을 입력했을 때 작성한 값 초기화
         scoreDisplay.innerHTML = score; // 정답일 때 점수창에 점수 1 증가해서 html 문서에 나타남
@@ -141,7 +142,9 @@
 
     /* 
       게임 종료 시 게임 종료 상태를 확인하기 어려워, 알림창 추가
-      같은 단어 중복
+         let randomNum = Math.floor(Math.random() * texts.length);가 두 번 사용되는 이유?
+        ㄴ 서로 다른 상황에서 새로운 랜덤 단어를 선택하고, 해당 단어를 displayText에 표시하기 위함
+        ㄴ 이 표현식이 두 번 사용됨으로써 게임 시작 시와 사용자가 정답을 맞혔을 때, 각각 랜덤 단어를 표시 가능
     */
   </script>
 

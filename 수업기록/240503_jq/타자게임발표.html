@@ -91,7 +91,8 @@
     let time = 30;// 시작할 때의 시간, 30초
     let isPlaying;// 게임 진행
     let timeInterval;// 1초마다 시간 체크
-    // 글자배열
+    
+    // 글자배열 랜덤으로 단어들이 나와야하기 때문에 배열함수와 조건문을 사용했습니다.
     let texts = [
       'display', 'float', 'background', 'color', 'position', 'clear', 'flex', 'textalign', 'fontweight', 'top',
       'apple', 'style', 'Hippopotomonstrosesquippedaliophobia'/*긴 단어에 대한 공포*/, 'stress', 'hover', 'JavaScript',
@@ -157,7 +158,6 @@
 
     /* 
       게임 종료 시 게임 종료 상태를 확인하기 어려워, 알림창 추가
-      같은 단어 중복
     */
   </script>
 

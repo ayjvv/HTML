@@ -5,11 +5,51 @@
   <meta charset="utf-8">
   <title>한글로렘입숨생성기</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+  <style>
+    body {
+      margin: 0;
+    }
+    h1 {
+      background-color: #9ccaff;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    form {
+      position: absolute;
+      left: 50%; top: 13%;
+      transform: translateX(-50%);
+    }
+    form #amount {
+      border: 1px solid #000;
+      outline: none;
+      padding: 7px;
+      margin: 10px;
+    }
+    form button {
+      background-color: #fff;
+      border: 1px solid #000;
+      padding: 6px 10px;
+    }
+    form button:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .result_text {
+      background-color: #fffbe6;
+      margin: 110px auto;
+      line-height: 1.5;
+      text-align: justify;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
+  <h1>한글 입숨 생성</h1>
   <form>
-    <input type="number" id="amount"> 
+    <input type="number" id="amount" placeholder="숫자를 입력해주세요">
     <!-- 사용자가 입력하는 숫자 창 -->
 
     <button type="submit" class="create_btn">생성</button>
@@ -17,7 +57,8 @@
     <button type="submit" class="middle_btn">중간</button>
     <button type="submit" class="long_btn">길게</button>
   </form>
-  <p class="result_text"></p>
+
+  <p class="result_text">내용이 표시됩니다</p>
 
   <script>
     /* 
@@ -31,7 +72,7 @@
       8. 길게 랜덤 단어 범위 : 40~50
     */
     const dummyText = [ // 한글 단어를 포함하는 배열
-      '계절이', '지나가는', '하늘에', '가을로', '있습니다', '나는', '걱정도', '아무', '없이', '가을 속의', '여름 하나', '별들을', '모두', '헤일 듯', '합니다', '가슴속에', '하나둘', '이제', '헤는 것은', '쉬이', '아침이', '오는', '까닭이요', '내일', '남은', '청춘이', '아니다', '다하지', '아직', '별 하나에', '추억과', '사랑과', '쓸쓸함과', '동경과', '시와', '어머니', '한마디', '이국 소녀들의', '이름과', '꽃들 속에서', '바람들과', '비둘기들', '불러봅니다', '릴케의', '시선과', '북간도에', '계십니다', '별빛들', '우는 벌레는', '부끄러운', '지난 겨울에', '봄이 오면', '피어나듯이', '우정의', '눈물과', '호수 속에', '한 마디의', '이듬 해', '민들레는', '지저귀는', '햇살 속에', '기울어진', '서로를', '닮아', '삶 속의', '소원을', '담아', '차오르는', '달의', '하려다 만', '속의 말', '시간의', '바깥에서'
+      '계절이', '지나가는', '하늘에', '가을로', '있습니다', '나는', '걱정도', '아무', '없이', '가을 속의', '여름 하나', '별들을', '모두', '헤일 듯', '합니다', '가슴속에', '하나둘', '이제', '헤는 것은', '쉬이', '아침이', '오는', '까닭입니다', '내일', '남은', '청춘이', '아니다', '다하지', '아직', '별 하나에', '추억과', '사랑과', '쓸쓸함과', '동경과', '시와', '어머니', '한마디', '이국 소녀들의', '이름과', '꽃들 속에서', '바람들과', '비둘기들', '불러봅니다', '릴케의', '시선과', '북간도에', '계십니다', '별빛들', '우는 벌레는', '부끄러운', '지난 겨울에', '봄이 오면', '피어나듯이', '우정의', '눈물과', '호수 속에', '한 마디의', '이듬 해', '민들레는', '지저귀는', '햇살 속에', '기울어진', '서로를', '닮아', '삶 속의', '소원을', '담아', '차오르는', '달의', '하려다 만', '속의 말', '시간의', '바깥에서', '별을', '무덤', '슬퍼하는', '새겨지는', '언덕', '소학교', '많은', '봅니다'
     ];
 
     const randomText = (amount) => { // 'amount'만큼 랜덤 단어 생성하여 반환

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>animateEx3</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body{margin: 0;}
+    .wrapper{
+      /* background-color: #ddd; */
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      left: -190px;
+    }
+    .wrapper .side-menu{
+      list-style: none;
+      background-color: thistle;
+      margin: 0;
+      padding: 100px 0 0 0;
+      width: 190px;
+      height: 100%;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 2;
+      text-align: center;
+     
+    }
+    .wrapper .btn{
+      background-color: thistle;
+      width: 40px;
+      height: 100px;
+      position: absolute;
+      left: 190px;
+      top: 10px;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+    .wrapper .btn span{
+      display: block;
+      transform: rotate(90deg);
+      /* text-orientation: upright;
+      writing-mode: vertical-rl; */
+   
+    }
+
+    /* body{
+      margin: 0;
+    }
+    .wrapper .side-menu{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #FFCF81;
+      position: fixed;
+      height: 100vh;
+      width: 200px;
+      text-align: center;
+      position: absolute;
+      left: -200px;
+    }
+    .wrapper .side-menu li{
+      margin: 20px;
+    }
+    .wrapper .side-menu li:nth-child(1){
+      margin-top: 200px;
+    }
+    .wrapper{
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    #open, #close{
+      background-color: thistle;
+      position: fixed;
+      transform: rotate(90deg);
+      top: 50px; left: -21px;
+      border-radius: 15px 15px 0 0;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    #open.style{
+      left: 179px;
+      transition: 1s;
+    } */
+
+  </style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+<script src="../asset/jquery-ui.min.js"></script>
+</head>
+<body>
+  <nav class="wrapper">
+    <ul class="side-menu">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <div id="close" class="btn"><span>close</span></div>
+    <div id="open" class="btn"><span>open</span></div>
+  </nav>
+  <script>
+  /*   $('#open').on('click', ()=>{
+      $('#open').addClass('style');
+      $('.wrapper .side-menu').animate({
+        left : 0
+      },1000);
+    });
+    $('#close').on('click', ()=>{
+      $('.wrapper .side-menu').animate({
+        left : -200
+      },1000);
+    }); */
+
+  /*   $('#open').on('click', ()=>{
+      $('.wrapper').animate({left : 0}, 300);
+      $('#open').hide();
+    });
+    $('#close').on('click', ()=>{
+      $('.wrapper').animate({left : -190}, 300);
+      $('#open').show();
+    }); */
+    
+  /* const wrapperLeft = $('wrapper').css('left');  
+    if(wrapperLeft === 0){
+        left: -190
+      }else{
+        left: 0
+      }   
+       */
+
+    $('#open, #close').on('click', ()=>{
+      $('.wrapper').animate({
+        left: $('.wrapper').css('left') === '0px' ? '-190px' : '0px'
+      }, 300);
+      $('#open').toggle();
+  });
+
+  </script>
+</body>
+</html>

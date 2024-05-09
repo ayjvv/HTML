@@ -1,73 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>slideEx1</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <style>
-    body{
-      margin: 0;
-    }
-    ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .gallery{
-      position: relative;
+    body { margin: 0; }
+    .simple-slide {
       width: 100%;
-      height: 500px;
+      margin:0 auto;
+      height: 60vh;
+      position: relative;
     }
-    .gallery .btn-group{
+    .simple-slide ul {
+      list-style: none;
+      margin:0; padding:0;
+    }
+    .simple-slide .slide-wrapper .slide-item {
+      text-indent: -999px;
+      width: 100%; height: 100%;
+      position: absolute;
+      top:0; left:0;
+      background: no-repeat 50% / cover;
+      transition: 0.4s;
+      opacity: 0;
+    }
+    .simple-slide .slide-wrapper #bg1 { background-image: url(./images/토토로.jpg); }
+    .simple-slide .slide-wrapper #bg2 { background-image: url(./images/치히로.jpg); }
+    .simple-slide .slide-wrapper #bg3 { background-image: url(./images/쥐.jpg); }
+    .simple-slide .slide-wrapper #bg4 { background-image: url(./images/포뇨.jpg); }
+
+    .simple-slide .slide-wrapper .slide-item.active {
+      opacity: 1;
+    }
+    .simple-slide .slide-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      width: 100%; height: 100%;
+      width: 100%;
     }
-    .gallery .btn-group li{
-      background-color: rgba(0, 0, 0,.7);
-      color: #fff;
-      font-weight: bold;
-      text-align: center;
-      width: 30px; height: 30px;
+    .simple-slide .slide-button li {
       cursor: pointer;
-      line-height: 30px;
       user-select: none;
-      background-attachment:;
+      background-color: rgba(255,255,255,0.6);
+      padding: 5px 10px;
+      font-weight: bold;
+      font-size: 1.4rem;
     }
-    .gallery .img-group li{
-      height: 50vh;
-      text-indent: -9999px;
+    .simple-slide .slide-button li:hover {
+      background-color: rgba(255,255,255,1);
     }
-    .gallery .img-group li:first-child{ background: url(./images/토토로.jpg)no-repeat 100% 0 / cover; }
-    .gallery .img-group li:nth-child(2){ background: url(./images/치히로.jpg)no-repeat 100% 0 / cover;}
-    .gallery .img-group li:nth-child(3){ background: url(./images/쥐.jpg)no-repeat  100% 0 / cover;}
-    .gallery .img-group li:nth-child(4){ background: url(./images/포뇨.jpg)no-repeat 100% 0 / cover;}
-
   </style>
-<script src="../asset/jquery-3.7.1.min.js"></script>
+  <script src="../asset/jquery-3.7.1.min.js"></script>
 </head>
+
 <body>
-  <div class="gallery">
-    <ul class="btn-group">
-      <li>&lt;</li>
-      <li>&gt;</li>
+  <div class="simple-slide">
+    <ul class="slide-wrapper">
+      <li class="slide-item active" id="bg1">bg1</li>
+      <li class="slide-item" id="bg2">bg2</li>
+      <li class="slide-item" id="bg3">bg3</li>
+      <li class="slide-item" id="bg4">bg4</li>
     </ul>
-    <ul class="img-group">
-      <li>이미지</li>
-      <li>이미지</li>
-      <li>이미지</li>
-      <li>이미지</li>
+    <ul class="slide-button">
+      <li id="prevBtn">&lt;</li>
+      <li id="nextBtn">&gt;</li>
     </ul>
   </div>
+
   <script>
-   $('.btn-group li').first().on('click', ()=>{
-    $('.img-group li:last-child').prependTo('.img-group');
-  });
-  $('.btn-group li').last().on('click', ()=>{
-    $('.img-group li:first-child').appendTo('.img-group');
-  });
+    let idx = 0;
+    function nextSlide() {
+      $('.slide-wrapper .slide-item').eq(idx).removeClass('active');
+
+      idx++;
+
+      const slideItems = $('.slide-wrapper .slide-item').length;
+
+      if(idx >= slideItems) {
+        idx = 0;// 초기화. 0, 1, 2, 3
+      }
+
+      $('.slide-wrapper .slide-item').eq(idx).addClass('active');
+    }
+
+    const prevSlide = () => {
+      $('.slide-wrapper .slide-item').eq(idx).removeClass('active');
+      idx--;
+
+      if(idx < 0) {
+        idx = $('.slide-wrapper .slide-item').length - 1;
+      }
+
+      $('.slide-wrapper .slide-item').eq(idx).addClass('active');
+    }
+
+    // next 버튼 클릭시 이후 == 슬라이드 움직임과 동일
+    $('#nextBtn').on('click', nextSlide);
+
+    // prev 버튼 클릭시 이전
+    $('#prevBtn').on('click', prevSlide);
+
+    setInterval(nextSlide, 2000);
   </script>
 </body>
 </html>

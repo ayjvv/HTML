@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>animateEx5</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    /* body{margin: 0;
+    background-color: skyblue;
+    height: 130vh; }
+
+    .nav-wrapper{
+      height: 100%;
+      position: fixed;
+      left: -190px;
+    }
+    .side-menu{
+      list-style: none;
+      padding: 100px 0 0 0; margin: 0;
+      background-color: orange;
+      width: 190px;
+      height: 100%;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .nav-wrapper .toggle-btn{
+      color: #000;
+      display: block;
+      position: absolute;
+      left: 190px; top: 10px;
+      background-color: orange;
+      padding: 10px;
+      border-radius: 0 10px 10px 0;
+    }
+    main{
+      font-size: 1.2rem;
+      font-weight: bold;
+      position: absolute;
+      top: 300px;
+    } */
+
+    body{margin: 0;}
+    .container{width: 100%; overflow: hidden;}
+    .nav-wrapper{
+      position: fixed;
+      width: 160px;
+      height: 100%;
+      top: 0;
+      left: -160px;
+      z-index: 999;
+      transition: 0.4s;
+    }
+    .nav-wrapper .toggle-btn{
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      background-color: orange;
+      padding: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      line-height: 2;
+      position: absolute;
+      left: 100%;
+      border: 1px solid #000;
+      border-left: none;
+      z-index: 9999;
+    }
+
+    .nav-wrapper .side-menu{
+      background-color: orange;
+      width: 100%;
+      height: 100%;
+      padding: 100px 50px;
+      margin: 0;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      border-right: 1px solid #000;
+      list-style: none;
+    }
+    main{
+      width: 100%;
+      height: 200vh;
+      background-color: lightblue;
+      overflow: hidden;
+      transition: 0.4s;
+      z-index: -9999;
+    }
+    main h2{
+      text-align: center;
+    }
+    .container.active .nav-wrapper{ left: 0; }
+    .container.active main{ transform:  translateX(160px); }
+  </style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+  <nav class="nav-wrapper">
+    <a href="#" class="toggle-btn"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg></a>
+
+      <ul class="side-menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+      </ul>
+  </nav>
+    <main>
+    <h2>contents</h2>
+    </main> 
+  </div>
+
+  <script>
+ /*    $('.nav-wrapper .toggle-btn').on('click',()=>{
+      $('.nav-wrapper').animate({
+        left: $('.nav-wrapper').css('left') === '0px' ? '-190px' : '0px'
+      }, 300)
+      $('main').animate({
+        left: $('.nav-wrapper').css('left') === '-190px' ? '190px' : '0px'
+      }, 300)
+    }) */
+
+/* 
+    let isButton = false;
+    $('.toggle-btn').on('click',()=>{
+    
+      if(!isButton){
+        $('.nav-wrapper').animate({ left : 0 },300);
+        $('main').animate({ marginLeft : 160 },300);
+        isButton = true;
+      } else{ //사이드 메뉴가 닫힘
+        $('.nav-wrapper').animate({ left : -160 },300);
+        $('main').animate({ marginLeft : 0 },300);
+        isButton = false;
+      }
+    }) */
+
+    $('.toggle-btn').on('click',()=>{
+      // $('.nav-wrapper').toggleClass('active');
+      // $('.main').toggleClass('active');
+      $('.container').toggleClass('active');
+    })
+  </script>
+</body>
+</html>   

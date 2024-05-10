@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>scrollTopEx</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    /* {scroll-behavior: smooth;} 충돌이 일어나서 스크립트랑 같이 사용하지 않음 */
+    body{margin: 0; text-align: center;}
+    header{ width: 100%; position: fixed; top: 0; left: 0; background-color: orange; font-size: 1.2rem; text-transform: capitalize; transition: 0.4s;}
+    header .global-menu{
+      list-style: none; margin: 0 10px; padding: 0; display: flex; justify-content: flex-end; align-items: center; height: 80px;
+    }
+    header .global-menu a{text-decoration: none; color: inherit; padding: 0 10px;}
+    header.change-header{
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255,0.7);
+      backdrop-filter: blur(30px);
+      border-bottom: 1px solid #000;
+    }
+    header.change-header .global-menu{
+      height: 50px;
+    }
+    main{
+      height: 200vh;
+      background-color: lightskyblue;
+      transition: 0.3s;
+    }
+    main h2{
+      margin: 0;
+      padding-top: 180px;
+      font-size: 3rem;
+    }
+    header.change-header + main{
+      padding-top: 100px;
+      background-color: turquoise;
+    }
+    .go-to-up{
+      position: fixed;
+      bottom: 30px; left: 30px;
+      background-color: aqua;
+    }
+    /* body{margin: 0;}
+    .container{
+      height: 100px;
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+    }
+    .container .box{
+      height: 100px;
+      background-color: thistle;
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex;
+      font-size: 1.2rem;
+      justify-content: end;
+      align-items: center;
+    }
+    .container .box li{
+      margin: 10px;
+    }
+    main{
+      height: 200vh;
+    }
+    main h2{
+      position: absolute;
+      right: 50%; top: 100px;
+    }
+    main .btn{
+      position: fixed;
+      bottom: 0;
+      margin: 10px;
+      font-size: 1.5rem;
+    }
+    .container .box.active{
+      background-color: orange;
+      border-bottom: 2px solid #000;
+      height: 80px;
+    } */
+
+  </style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+<!-- <div class="container">
+  <ul class="box">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+  </ul>
+</div>
+<main><h2>main</h2>
+<a href="#" class="btn">맨 위로</a>
+</main> -->
+
+<header>
+  <ul class="global-menu">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </ul>
+</header>
+
+<main>
+  <h2>main</h2>
+</main>
+  <a href="#" class="go-to-up">맨 위로</a>
+
+
+<script>
+  $('a[href="#"]').on('click',(e)=>{
+     e.preventDefault(); //요소의 기본 성격 제거
+  });
+
+  $('.go-to-up').on('click',(e)=>{
+    
+    $('html, body').animate({ scrollTop: 0 },300);
+  });
+
+  let scroll = 300;
+  $(window).on('scroll', (e)=>{
+    // let windowScroll = $('html, body').scrollTop();
+    let scrollHt = $(e.target).scrollTop();
+    if(scrollHt > scroll){
+      $('header').addClass('change-header')
+    }else{
+      $('header').removeClass('change-header')
+    }
+  })
+</script>
+</body>
+</html>

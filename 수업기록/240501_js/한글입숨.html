@@ -116,7 +116,7 @@
     const longBtn = document.querySelector('.long_btn');
 
     shortBtn.addEventListener('click', (e) => {
-      e.preventDefault();
+      e.preventDefault(); //원래 가지고 있는 성격없앰
       // 짧게 버튼을 클릭했을 때 10~15개의 단어 출력
       const amount = Math.floor(Math.random() * 6) + 10; // 10~15개
       // 10~15까지의 숫자 개수 = 6개, 시작범위는 10

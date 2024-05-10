@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>scrollTo+scrollBy+scrollIntoView</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body{
+      height: 200vh;
+    }
+    #box1{
+      position: absolute;
+      top: 200px; left: 50px;
+      width: 200px; height: 100px;
+      background-color: orange;
+    }
+    #box2{
+      position: absolute;
+      top: 500px; left: 30px;
+      width: 300px; height: 200px;
+      background-color: orangered;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>scrollTo+scrollBy+scrollIntoView</h1>
+  <button id="btn1">box1 이동</button>
+  <button id="btn2">box2 이동</button>
+  <button id="btn3">box3 이동</button>
+  <button id="btn4">box4 이동</button>
+  <button id="btn5">스크롤 이동</button>
+
+  <div class="box" id="box1">box1</div>
+  <div class="box" id="box2">box2</div>
+  <div class="box" id="box3">box3</div>
+</body>
+</html>

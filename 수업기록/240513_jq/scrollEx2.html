@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>scrollEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+
+    body { margin:0; text-align: center }
+    header { position: fixed; top:0; width: 100%; height: 80px; background-color: #6DC5D1; display: flex; justify-content: space-between; transition: 0.4s; border-bottom: 3px solid #000;}
+    header .global-menu { display: flex; list-style: none; margin:0; padding:0; text-transform: capitalize; font-weight: bold; }
+    header .global-menu a { color:inherit; text-decoration: none; display: block; margin:0 20px; height: 80px; box-sizing: border-box; line-height: 80px; }
+
+    main { height: 300vh; background-color: #ddd; padding-top: 200px; font-weight: bold; font-size: 3rem; }
+    main h2 {
+      background-color: orange;
+    }
+
+    /* body{margin: 0;}
+    .global-menu{
+      margin: 0;
+      height: 100px;
+      background-color: orange;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 3px solid #000;
+    }
+    .global-menu a{
+      text-decoration: none;
+      color: inherit;
+      text-transform: capitalize;
+      display: block;
+      height: 100px;
+      line-height: 100px;
+      margin: 0 10px;
+    }
+    main{
+      background-color: slategray;
+      height: 200vh;
+      text-align: center;
+      padding-top: 200px;
+    }
+    main h2{
+      margin: 0;
+      font-size: 4rem;
+      text-transform: capitalize;
+      background-color: thistle;
+    } */
+  </style>
+<script src="../asset/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header>
+    <ul class="global-menu">
+      <li><a href="#">menu4</a></li>
+      <li><a href="#">menu4</a></li>
+      <li><a href="#">menu4</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </header>
+  <main>
+    <h2>scrollEx2</h2>
+  </main>
+
+  
+  <script>
+    // 스크롤이 내려가면 헤더가 사라지고, 스크롤이 올라가면 헤더가 내려옴
+    // addEventListener('scroll', () => {})
+
+    // 브라우저를 열면 바로 읽음. 보통은 0
+    let prevScroll = window.scrollY;
+    console.log('prevScroll ', prevScroll);
+
+    $(window).on('scroll', () => {
+      // 스크롤을 하면, scrollY의 값 반환
+      let currentScroll = window.scrollY;
+      console.log('currentScroll ', currentScroll);
+
+      if(prevScroll > currentScroll) {// 스크롤을 올리면 헤더가 보임
+        // $('header').show();
+        // $('header').slideDown();
+        $('header').css({ top: 0 });
+      } else {// 스크롤을 내리면 헤더가 숨김
+        // $('header').hide();
+        // $('header').slideUp();
+        $('header').css({ top: -80 });
+      }
+
+      // prev에 현재 스크롤 값 재할당
+      prevScroll = currentScroll;
+      console.log('재할당 된 prevScroll ', prevScroll);
+    })
+  </script>
+</body>
+</html>

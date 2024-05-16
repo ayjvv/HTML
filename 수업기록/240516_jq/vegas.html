@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>vegasEx</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- reset -->
+  <link rel="stylesheet" href="../asset/styles/reset.css">
+  <!-- fonts -->
+  <!-- pulgIn -->
+  <link rel="stylesheet" href="./vegas.min.css">
+  <!-- 내가 작업한 스타일 -->
+  <style>
+    .container {
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      border: #000 solid 3px;
+      margin: 50px auto;
+      position: relative;
+    }
+    .btn {
+      background-color: #fff;
+      border : 3px solid #000;
+      font-weight: bold;
+      width: 150px; height: 150px;
+      border-radius: 50%;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+    }
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .container .vegas-timer{
+      top: 0;
+      height: 10px;
+    }
+    .container .vegas-timer-progress{
+      background-color: #000;
+    }
+  </style>
+
+  <!-- jQuery -->
+  <script src="../asset/jquery-3.7.1.min.js"></script>
+  <!-- plugIn -->
+  <script src="./vegas.min.js"></script>
+  <!-- 내가 작업한 script -->
+  <!-- <script src="" defer></script> -->
+  <script>
+    $(document).ready(function() {
+      $('.container').vegas({
+        delay: 3000,
+        timer: true,
+        shuffle: true,
+        firstTransition: 'fade',
+        firstTransitionDuration: 5000,
+        transition: 'slideLeft2',
+        overlay : './overlays/02.png',
+        slides: [
+        { src: "./images/bg1.png" },
+        { src: "./images/bg2.png" },
+        { src: "./images/bg3.png" },
+        { src: "./images/bg4.png" }
+    ]
+});
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <a href="#" class="btn">버튼</a>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>삼항연산자+단란회로평가</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+</head>
+<body>
+  <h1>삼항연산자,단란회로평가</h1>
+
+  <script>
+
+
+
+  console.log(`--&&`);
+  false && console.log(`A가 거짓이면 이 내용은 보이지 않음`);
+  true && console.log(`A가 참이면 이 내용은 보임`);
+  
+  if (11 > 10){
+    console.log('true')
+  }
+
+  (11 > 10) && console.log('truthy한 상황');
+
+  console.log(true && false && true); // false. 1번은 참이어서 2번을 읽었으나 거짓이어서 멈춤 falsy
+
+  console.log(11 > 10 && 11 == 10 && '출력되지 않음'); //true && false && true
+  console.log(11 > 10 && 11 != 10 && '출력됨'); //true && true && true
+
+  console.log(`-- ||`)
+  // A가 true인 경우 B의 값을 탐색할 필요가 없으면 반환되지 않음. truthy
+  true || console.log(`A가 참이면 이 내용은 반환되지 않음`);
+  false || console.log(`A가 거짓이면 이 내용은 반환됨`);
+
+  console.log(false || true || true); //true
+  console.log('' || '여기서 멈춤' || 222); // '여기서 멈춤'
+
+  console.log('=======')
+  const done1 = true;
+  const done2 = false;
+  const done3 = undefined;
+
+  const output1 = (done1 === true) ? '참' : '거짓';
+  console.log(output1);
+
+  const output2 = done2 || '거짓인 결과, 조건이 맞지 않습니다';
+
+  const output3 = done3 || '값이 존재하지 않음'
+  console.log(output3)
+  </script>
+  
+</body>
+</html>

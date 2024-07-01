@@ -1,0 +1,21 @@
+<body>
+    <h1>즉시실행함수</h1>
+    <p>충돌을 방지</p>
+<script>
+    (function(){
+        let num = 100;
+        function menu(){
+            num += 100;
+            alert(num);
+        }menu();//200
+    }());
+
+    (function(){
+        let num = 100;
+        function menu(){
+            alert(num);
+        }menu();//100
+    }
+    ());
+</script>
+</body>

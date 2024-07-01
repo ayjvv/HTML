@@ -1,0 +1,38 @@
+<body>
+    <h1>math_ob2</h1>
+    <script>
+        // Math.random()*10;
+
+        // document.write(Math.random()*10)//10까지의 난수
+        // document.write(Math.floor(Math.random()*11));//10까지의 난수를 정수로만
+
+        // document.write(Math.floor(Math.random()*11) + 30)//10+30=40까지
+
+        document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+        game = prompt("가위, 바위, 보 중 선택하세요?", "입력해주세요");
+        var gameNum;
+
+        switch(game){
+            case'가위': gameNum = 1;
+            break;
+            case'바위': gameNum = 2;
+            break;
+            case'보': gameNum = 3;
+            break; // game에 저장된 문자열에 따라 gameNumdp 1,2,3이 저장됩니다.
+            
+            default: alert("잘못 작성하셨습니다.");
+		    location.reload()
+        }
+
+        // document.write(Math.ceil(Math.random()*3));
+        
+	    com = Math.ceil( Math.random() * 3 ); // 1~3 사이에서 난수가 발생합니다.
+
+        document.write("<img src=\"images/math_img_" + com + ".jpg\">");
+        if(gameNum == com) { // gameNum과 com이 일치하는지 검사합니다.
+		document.write("<img src=\"images/game_1.jpg\">");
+	    } else {
+		document.write("<img src=\"images/game_2.jpg\">");
+	    }
+    </script>
+</body>

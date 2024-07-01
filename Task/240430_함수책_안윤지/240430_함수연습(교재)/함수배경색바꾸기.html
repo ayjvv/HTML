@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수정의문 배경색 바꾸기</title>
+    <script>
+        color = ["white", "yellow", "aqua", "purple"];
+
+        let i = 0;
+        function changeColor(){
+            i++;
+            if(i >= color.length){
+                i = 0; // i의 값이 4이상이면 i에 0을 대입합니다.
+            }
+            bodyTag = document.getElementById("theBody");//매서드는 id값을 이용해 문서 객체(태그)를 선택하는 매서드입니다.
+            bodyTag.style.backgroundColor = color[i]; 
+        } 
+    </script>
+</head>
+<body>
+<body id="theBody">
+    <button onclick="changeColor();">배경색 바꾸기</button> 
+    <!-- 버튼을 클릭하면 changeColor() 함수를 호출합니다. -->
+</body>
+</html>

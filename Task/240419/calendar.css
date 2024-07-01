@@ -1,0 +1,140 @@
+@charset "UTF-8";
+  body{
+    margin: 0 30px;
+  }
+  section{
+    background-color: var(--color-point-bg);
+    margin-top: 85px;
+    height: 500px;
+    width: 100%;
+  }
+
+/* am */
+.am{
+  display: none;
+}
+
+/* 12tues */
+.mon .mon-list-green{
+  background-color: var(--color-point-green);
+  height: 30%;
+  margin-top: 200px;
+}
+.mon .mon-list-green p:first-child{
+  padding: 30px 0 10px 0;
+}
+
+/* 12tues */
+.tues .tues-list-red{
+  background-color: var(--color-point-red);
+  border: none;
+  height: 22%;
+}
+.tues .tues-list-red p:first-child{
+  padding:30px 0 10px 0;
+}
+
+.tues .tues-list-yellow{
+  background-color: var(--color-point-yellow);
+  margin-top: 50px;
+  height: 30%;
+}
+.tues .tues-list-yellow p:first-child{
+  padding:30px 0 10px 0;
+}
+
+/* 11wed */
+.wed .wed-list-blue{
+  background-color: var(--color-point-blue);
+  margin: 0 8px;
+}
+
+.wed .wed-list-blue h3{
+  margin-top: 110px;
+  font-size: var( --font-title-sm);
+  font-weight: 700;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: 1px solid var(--color-point-line);
+  height: 50px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: end;
+}
+.wed .wed-p{
+  text-transform: uppercase;
+  padding: 10px 18px;
+}
+.wed .wed-list-green{
+  height: 30%;
+  background-color: var(--color-point-green);
+}
+
+/* 12thurs */
+.thurs .thurs-list-red{
+ background-color: var(--color-point-red); 
+ height: 22%;
+}
+
+.thurs .thurs-list-yellow{
+  background-color: var(--color-point-yellow);
+  height: 30%;
+  margin-top: 50px;
+}
+
+
+@media screen and (min-width: 900px){
+  body{
+    display: flex;
+  }
+  section{
+    margin-right: 5px;
+    height: 600px;
+  }
+  h2{
+    font-size: var(--font-title-sm);
+    margin-top: 40px;
+    font-weight: 500;
+  }
+  /* am */
+.am{
+  display: block;
+  text-transform: uppercase;
+  margin: 50px 5px;
+}
+.am .am-list {
+  position: relative;
+}
+strong{
+  position: absolute;
+  top: 30px;
+  font-size: var(--font-title-lg);
+}
+.am .am-list li{
+  margin-bottom: 35px;
+}
+
+/* 11wed */
+.wed-list-green{
+  margin-top: 40px;
+}
+.wed .wed-list-blue h3{
+  padding-bottom: 15px;
+  padding-top: 50px;
+}
+
+}
+
+@media screen and (min-width: 1200px){
+  strong{
+    position: static;
+  }
+  h2{
+    font-size: var(--font-title-lg);
+    margin-top: 0;
+    font-weight: 300;
+  }
+  .am{
+    margin-top: 85px;
+  }
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>backgroundEx</title>
+    <style>
+        body {
+            width: 750px;
+            margin: 20px auto;
+            background-image: url(./images/나무질감.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .wrapper {
+            list-style: none;
+            padding: 0;
+        }
+
+        .box1 {
+            display: flex;
+        }
+
+        .wrapper li {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            border: 3px solid pink;
+        }
+
+        .box {
+            list-style: none;
+            padding: 0;
+        }
+
+        header {
+            background-color: blueviolet;
+            padding-left: 10px;
+            color: #fff;
+        }
+
+        .gnb {
+            display: flex;
+
+        }
+
+        .box2 {
+            background-color: burlywood;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .box2 li a {
+            height: 40px;
+            line-height: 40px;
+            display: block;
+            padding: 0 25px;
+        }
+
+        .box2 li a {
+            text-decoration: none;
+            color: darkmagenta;
+            font-weight: bold;
+        }
+
+        .box2 li a:hover {
+            background: red;
+            color: #fff;
+        }
+
+        article {
+            background-color: #ddd;
+            padding: 8px 0 40px 0;
+        }
+
+        .box3,
+        .box5 {
+            border: 1px solid red;
+            padding: 5px;
+            width: 180px;
+            text-align: center;
+            background-color: #fff;
+            margin: 10px
+        }
+
+        .box3 li,
+        .box5 li {
+            color: gray;
+        }
+
+        article h2 {
+            margin: 0;
+        }
+
+        .box4,
+        .box6 {
+            padding: 0 5px;
+        }
+
+        .box4 li,
+        .box6 li {
+            padding: 0 5px 8px;
+        }
+
+
+        aside {
+            background-color: #fff;
+            width: 55%;
+            border-left: 1px red solid;
+
+        }
+
+        footer {
+            background-color: blueviolet;
+            color: #fff;
+            padding: 5px;
+            font-size: 0.8rem;
+        }
+
+        header h2,
+        p,
+        .box2 {
+            margin: 0;
+        }
+
+        aside h2 {
+            color: red;
+            padding: 10px;
+        }
+
+        aside .box7 li {
+            border-bottom: red 2px solid;
+            padding: 10px;
+        }
+
+        aside .box8 {
+            padding: 10px;
+        }
+
+        .box7 li:hover {
+            background-color: red;
+            color: #fff;
+        }
+
+        .box4 li:nth-child(2) {
+            color: red;
+            font-weight: bold;
+        }
+
+        .box6 li:nth-child(2) {
+            color: red;
+            font-weight: bold;
+        }
+
+        .box4 li:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .box6 li:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .one {
+            display: flex;
+        }
+
+        .two {
+            display: flex;
+        }
+
+        .box3 li:nth-child(2) {
+            text-align: right;
+        }
+
+        .box5 li:nth-child(2) {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="box box1">
+                <ul class="wrapper">
+                    <li><img src="./images/로고.png"></li>
+                </ul>
+
+                <ul class="wrapper">
+                    <li>Kim's Kitchen</li>
+                    <li>cooking class</li>
+                </ul>
+            </div>
+
+        </header>
+
+        <ul class="box box2">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">교실</a></li>
+            <li><a href="#">케이터링</a></li>
+            <li><a href="#">연락처</a></li>
+        </ul>
+
+        <div class="gnb">
+            <article>
+                <div class="one">
+                    <ul class="box box3">
+                        <li><img src="./images/샐러드.png"></li>
+                        <li><em>Oriental salad</em></li>
+                    </ul>
+
+
+
+                    <ul class="box box4">
+                        <li>채식주의자</li>
+                        <li>런던에서의 5주코스</li>
+                        <li>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</li>
+                    </ul>
+                </div>
+
+                <div class="two">
+                    <ul class="box box5">
+                        <li><img src="./images/소스.png"></li>
+                        <li><em>Oriental salad</em></li>
+                    </ul>
+
+
+                    <ul class="box box6">
+                        <li>소스 마스터클래스</li>
+                        <li>1일 워크샵</li>
+                        <li>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</li>
+                    </ul>
+                </div>
+
+
+
+            </article>
+
+            <aside>
+                <h2>인기요리법</h2>
+                <ul class="box box7">
+                    <li>후라이드</li>
+                    <li>고추바사삭</li>
+                    <li>양념치킨</li>
+                    <li>뿌링클</li>
+                </ul>
+
+                <h2>연락처</h2>
+                <ul class="box box8">
+                    <li>경기 수원시 팔달구 매산동</li>
+                </ul>
+            </aside>
+        </div>
+
+
+
+        <footer>ⓒKim's Kitchen 김씨네 키친</footer>
+    </div>
+
+</body>
+
+</html>

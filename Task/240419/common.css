@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+
+/**** fonts ****/
+/* "Open Sans", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+  font-family: "Open Sans",-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", Aria sans-serif;
+}
+
+/* 변수 */
+:root{
+  --font-title-lg: 2.5rem;
+  --font-title-md: 1rem; 
+  --font-title-sm: 1rem; 
+
+  --color-point-bg: #fff1f8;
+  --color-point-line: #f2d3d8;
+  
+  --color-point-green: #d1ffe6;
+  --color-point-blue: #e2f8ff;
+  --color-point-red: #ffd6d1;
+  --color-point-yellow: #fafaa3;
+}
+
+/* 공통값 */
+h2{
+  font-weight: 300;
+  font-size: var(--font-title-lg);
+  margin: 0;
+}
+section{
+  border-radius: 5px;
+}
+section p:first-child{
+  text-transform: capitalize;
+  font-size: var( --font-title-sm);
+  font-weight: 700;
+  padding: 25px 0 10px 0;
+}
+section p:last-child{
+  text-transform: uppercase;
+  font-size: var(--font-title-md);
+}
+
+/* 클래스 적용값 */
+.border{
+  border-radius: 5px;
+  border: 1px solid var(--color-point-line);
+  margin: 0 8px;
+  padding: 0 8px;
+}
+
